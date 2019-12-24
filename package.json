@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/egalli64/fed/issues"
   },
-  "homepage": "https://github.com/egalli64/fed#readme"
+  "homepage": "https://github.com/egalli64/fed#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
