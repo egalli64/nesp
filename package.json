@@ -1,0 +1,19 @@
+{
+  "name": "fed",
+  "version": "1.0.0",
+  "description": "Front End Developer Course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egalli64/fed.git"
+  },
+  "author": "egalli64@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/egalli64/fed/issues"
+  },
+  "homepage": "https://github.com/egalli64/fed#readme"
+}
