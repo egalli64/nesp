@@ -1,0 +1,44 @@
+body {
+    background-color: gray;
+}
+
+p {
+    font-family: fantasy;
+}
+
+#special {
+    color: violet;
+}
+
+h1, h2, h3 {
+    color: yellow;
+}
+
+.myClass {
+    font-style: italic;
+}
+
+p.myClass {
+    color: blue;
+}
+
+#paragraphId {
+    color: red;
+}
+
+#blockId {
+    border: 3px solid #ff8000;
+    background-color: #ffff80;
+}
+
+.boldCls {
+    font-weight: bold;
+}
+
+.itaCls {
+    font-style: italic;
+}
+
+.upperCls {
+    text-transform: uppercase;
+}

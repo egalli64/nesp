@@ -1,0 +1,8 @@
+div.highlight {
+    text-align: center;
+    color: red;
+}
+
+span#important {
+    background-color: yellow;
+}

@@ -1,0 +1,23 @@
+body {
+    background-color: lightyellow;
+}
+
+[type=text] {
+    background-color: olive;
+}
+
+[type=number] {
+    background-color: yellow;
+}
+
+input:hover {
+    color: blue;
+}
+
+div span {
+    background-color: yellow;
+}
+
+div>span {
+    font-weight: bold;
+}
