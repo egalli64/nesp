@@ -1,0 +1,38 @@
+header {
+    text-align: center;
+}
+
+section {
+    display: flex;
+    border: 1px solid black;
+}
+
+article {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid red;
+}
+
+#container {
+    border: 2px solid black;
+}
+
+.box {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+#container1 {
+    display: flex;
+    height: 300px;
+    border: 2px solid black;
+}
+
+.box1 {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
