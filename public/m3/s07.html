@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Slide 7</title>
+</head>
+
+<body>
+    <h1>Operators /2</h1>
+
+    <p>
+        Back <a href=".">home</a>
+    </p>
+
+    <textarea id="target" rows="20" cols="80"></textarea>
+
+    <script type="text/javascript">
+        let target = document.getElementById('target');
+
+        let value = 2;
+        target.value += value + '\n';
+
+        value += 3;
+        target.value += value + '\n';
+
+        value -= 2;
+        target.value += value + '\n';
+
+        value *= 3;
+        target.value += value + '\n';
+
+        value %= 4;
+        target.value += value + '\n';
+    </script>
+</body>
+
+</html>
