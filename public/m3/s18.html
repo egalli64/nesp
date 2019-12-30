@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Object /1</title>
+    <title>Object /2</title>
 </head>
 
 <body>
-    <h1>Object /1</h1>
+    <h1>Object /2</h1>
 
     <p>
         Back <a href=".">home</a>
@@ -23,15 +23,20 @@
             this.hello = () => 'Hello from ' + p.first;
         }
 
+        function PersonEx(first, middle, last) {
+            Person.call(this, first, last);
+            this.middle = middle;
+
+            this.helloEx = () => this.hello() + ' ' + this.middle;
+        }
+
+
         let p = new Person('Tom', 'Jones');
+        let q = new PersonEx('Quincy', 'H.', 'Jones');
 
         let target = document.getElementById('target');
-        target.value += p.first + ', ' + p.last + '\n';
         target.value += p.hello() + '\n';
-
-        delete p.last;
-        p.middle = 'H.';
-        target.value += p.first + ', ' + p.middle + ', ' + p.last + '\n';
+        target.value += q.helloEx() + '\n';
     </script>
 </body>
 
