@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Slide 10</title>
+</head>
+
+<body>
+    <h1>Truthy &amp; falsy</h1>
+
+    <p>
+        Back <a href=".">home</a>
+    </p>
+
+    <textarea id="target" rows="20" cols="80"></textarea>
+
+    <script type="text/javascript">
+        let target = document.getElementById('target');
+
+        let alpha = true;
+        let beta = false;
+        target.value += 'alpha: ' + alpha + ', beta: ' + beta + '\n';
+
+        target.value += 'alpha && beta: ' + (alpha && beta) + '\n';
+        target.value += 'alpha || beta: ' + (alpha || beta) + '\n';
+        target.value += '!alpha: ' + !alpha + '\n';
+        target.value += 'alpha & beta: ' + (alpha & beta) + '\n';
+        target.value += 'alpha | beta: ' + (alpha | beta) + '\n';
+
+        let gamma = 0b101;  // 5
+        let delta = 0b110;  // 6
+
+        target.value += 'gamma: ' + gamma + ', delta: ' + delta + '\n';
+        target.value += 'gamma & delta: ' + (gamma & delta) + '\n';
+        target.value += 'gamma | delta): ' + (gamma | delta) + '\n';
+        target.value += 'gamma ^ delta): ' + (gamma ^ delta) + '\n';
+        target.value += 'gamma && delta: ' + (gamma && delta) + '\n';
+        target.value += 'gamma || delta: ' + (gamma || delta) + '\n';
+    </script>
+</body>
+
+</html>

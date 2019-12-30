@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Slide 11</title>
+</head>
+
+<body>
+    <h1>String /1</h1>
+
+    <p>
+        Back <a href=".">home</a>
+    </p>
+
+    <textarea id="target" rows="20" cols="80"></textarea>
+
+    <script type="text/javascript">
+        let target = document.getElementById('target');
+
+        let value = 'Solution' + 42;
+        let check = 'Solution' + 42 === 'Solution42';
+        target.value += check + '\n';
+
+        let a = 42;
+        check = a.toString() === '42';
+        target.value += check + '\n';
+
+        check = Number('42') === 42;
+        target.value += check + '\n';
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Slide 17</title>
+</head>
+
+<body>
+    <h1>Object</h1>
+
+    <p>
+        Back <a href=".">home</a>
+    </p>
+
+    <textarea id="target" rows="20" cols="80"></textarea>
+
+    <script type="text/javascript">
+        function Person(first, last) {
+            this.first = first;
+            this.last = last;
+        }
+
+        let p = new Person('Tom', 'Jones');
+
+        let target = document.getElementById('target');
+        target.value += p.first + ', ' + p.last + '\n';
+
+        delete p.last;
+        p.middle = 'H.';
+        target.value += p.first + ', ' + p.middle + ', ' + p.last + '\n';
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Slide 13</title>
+</head>
+
+<body>
+    <h1>Array</h1>
+
+    <p>
+        Back <a href=".">home</a>
+    </p>
+
+    <textarea id="target" rows="20" cols="80"></textarea>
+
+    <script type="text/javascript">
+        let target = document.getElementById('target');
+
+        let data = [1, 'hello', [true, 42.24]];
+        target.value += 'data length is ' + data.length + '\n';
+        target.value += 'last item is ' + data[data.length - 1] + '\n';
+        target.value += 'item 1 of last item is ' + data[data.length - 1][1] + '\n';
+
+        data[2] = false;
+
+        target.value += 'Loop on all items in data: ';
+        for (let i = 0; i < data.length; i++) {
+            target.value += data[i] + ' ';
+        }
+        target.value += '\n';
+
+        target.value += 'Array joined: ' + data.join() + '\n';
+        target.value += 'Array to string: ' + data.toString() + '\n';
+
+        target.value += 'pop: ' + data.pop() + '\n';
+        target.value += 'shift: ' + data.shift() + '\n';
+        target.value += 'current status: ' + data + '\n';
+
+        data.push('push1');
+        data.push('push2');
+        data.unshift('unshift');
+        target.value += 'new status after two pushes and one unshift: ' + data + '\n';
+
+        data.splice(1, 2);
+        target.value += 'new status after splice from 1 of 2 items: ' + data + '\n';
+    </script>
+</body>
+
+</html>
