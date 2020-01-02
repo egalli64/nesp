@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exception</title>
+</head>
+
+<body>
+    <h1>Exception</h1>
+
+    <p>
+        Back <a href=".">home</a>
+    </p>
+
+    <textarea id="target" rows="20" cols="80"></textarea>
+
+    <script type="text/javascript">
+        function indexToMonthName(index) {
+            if (!Number.isInteger(index) || index < 1 || index > 12) {
+                throw 'Invalid month number: ' + index;
+            }
+
+            let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            return months[index - 1];
+        }
+
+        try {
+            let target = document.getElementById('target');
+            target.value += 'Month 1 is ' + indexToMonthName(1) + '\n';
+            target.value += 'Month 12 is ' + indexToMonthName(12) + '\n';
+            target.value += 'Month 0 is ' + indexToMonthName(0) + '\n';
+
+            target.value += 'An exception ends the normal execution flow\n';
+        } catch (exc) {
+            target.value += exc + '\n';
+        } finally {
+            target.value += 'done\n';
+        }
+    </script>
+</body>
+
+</html>

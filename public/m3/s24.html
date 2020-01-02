@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Date</title>
+    <title>Template literals</title>
 </head>
 
 <body>
-    <h1>Date</h1>
+    <h1>Template literals</h1>
 
     <p>
         Back <a href=".">home</a>
@@ -18,9 +18,10 @@
     <script type="text/javascript">
         let target = document.getElementById('target');
 
-        let now = new Date();
-        target.value += now + '\n';
-        target.value += "Today is " + now.getDate() + ", month " + (now.getMonth() + 1) + '\n';
+        let x = 12;
+        let y = 24;
+
+        target.value += `Sum is ${x + y}\n`;
     </script>
 </body>
 
