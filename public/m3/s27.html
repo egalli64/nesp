@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>BOM</title>
+</head>
+
+<body>
+    <h1>BOM</h1>
+
+    <p>
+        Back <a href=".#jsHtml">home</a>
+    </p>
+
+    <textarea id="target" rows="20" cols="80"></textarea>
+    <div>
+        <input type="button" value="alert" onclick="alert('alert!');">
+        <input type="button" value="confirm" onclick="checkConfirm();">
+    </div>
+
+    <script type="text/javascript">
+        let target = document.getElementById('target');
+
+        target.value += `window heights: ${window.outerHeight}, ${window.innerHeight}
+window widths: ${window.outerWidth}, ${window.innerWidth}\n`;
+
+        function checkConfirm() {
+            if (!confirm('confirm?')) {
+                target.value += "not ";
+            }
+            target.value += "confirmed.\n";
+        };
+    </script>
+</body>
+
+</html>
