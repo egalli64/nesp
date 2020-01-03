@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Events &amp; attributes</title>
+
+    <!-- expected to run _before_ loading the DOM -->
+    <script type="text/javascript" src="js/s31a.js" async>
+    </script>
+
+
+    <!-- should run _after_ loading the DOM -->
+    <script type="text/javascript" src="js/s31b.js" defer>
+    </script>
+
+    <style type="text/css">
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Events &amp; attributes</h1>
+
+    <p>
+        Back <a href=".#jsHtml">home</a>
+    </p>
+
+    <!-- TBD: missing action -->
+    <form id="f">
+        <input id="x">
+        <button>OK</button>
+    </form>
+
+    <div id="box"></div>
+</body>
+
+</html>

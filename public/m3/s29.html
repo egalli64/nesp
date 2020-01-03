@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>on event</title>
+
+    <!-- could run _before_ loading the DOM -->
+    <script type="text/javascript" src="js/s29a.js" async>
+    </script>
+
+    <!-- should run _after_ loading the DOM -->
+    <script type="text/javascript" src="js/s29b.js" defer>
+    </script>
+</head>
+
+<body>
+    <h1>on event</h1>
+
+    <p>
+        Back <a href=".#jsHtml">home</a>
+    </p>
+
+    <!-- TBD: fake action -->
+    <form action="first" onsubmit="return check();">
+        <input id="x">
+        <button>OK</button>
+    </form>
+
+    <!-- TBD: fake action -->
+    <form action="second" id="second">
+        <input id="y">
+        <button>OK</button>
+    </form>
+</body>
+
+</html>
