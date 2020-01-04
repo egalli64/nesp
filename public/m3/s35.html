@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>AJAX</title>
+</head>
+
+<body>
+    <h1>Asynchronous JavaScript And XML</h1>
+    <p>
+        Back <a href=".#jsHtml">home</a>
+    </p>
+
+    <textarea id="target" rows="20" cols="80"></textarea>
+    <div>
+        <button onclick="getInfo();">Get programmer info</button>
+    </div>
+
+    <script type="text/javascript">
+        function getInfo() {
+            let request = new XMLHttpRequest();
+            request.onload = callback;
+            request.open("GET", "data/tom.json");
+            request.send();
+        }
+
+        function callback() {
+            let target = document.getElementById('target');
+            if (this.status != 200) {
+                target.value += "[" + this.status + "]\n";
+                return;
+            }
+            let json = JSON.parse(this.responseText);
+
+            target.value += json.name + '\n';
+            target.value += json.job.title + '\n';
+            target.value += json.job.languages + '\n';
+        }
+    </script>
+</body>
+
+</html>
