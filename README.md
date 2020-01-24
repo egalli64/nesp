@@ -1,5 +1,5 @@
 # nesp
-Node Express Static Project
+Static Web Project on Node Express
 
 Just:
 - git clone the repo
