@@ -1,9 +1,9 @@
 /**
- * s04.js
- * 
- * Example for slide 4
+ * Assuming
+ *  DOM is already there
+ *  target is an element with a textual content
  */
 
-let header = document.querySelector('h2');
-header.textContent = 'Hello!';
+let target = document.getElementById('target');
+target.textContent = 'Hello!';
 console.log('hello!');

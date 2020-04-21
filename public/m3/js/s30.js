@@ -1,6 +1,4 @@
 /**
- * s30.js
- * 
  * Bind a function on submit to an element -> it should be in the DOM!
  */
 

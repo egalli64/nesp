@@ -1,6 +1,4 @@
 /**
- * s32.js
- * 
  * The elements should be in the DOM!
  */
 
@@ -19,5 +17,13 @@ document.getElementById('foreToggle').onclick = () => {
 };
 
 document.getElementById('borderReplace').onclick = () => {
-    target.classList.replace('borderA', 'borderB');
+    console.log(target.classList.item(0), target.classList.item(1), target.classList.item(2));
+    
+    if(target.classList.contains('borderA')) {
+        target.classList.replace('borderA', 'borderB');        
+    } else if(target.classList.contains('borderB')) {
+        target.classList.replace('borderB', 'borderC');        
+    } else {
+        target.classList.replace('borderC', 'borderA');        
+    }
 };

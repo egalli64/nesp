@@ -1,6 +1,4 @@
 /**
- * s29a.js
- * 
  * A function called on submit
  */
 

@@ -1,5 +1,5 @@
 /**
- * s39.js
+ * derived class
  */
 
 class PersonD {

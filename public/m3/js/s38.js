@@ -1,5 +1,5 @@
 /**
- * s38.js
+ * static method
  */
 
 class PersonC {

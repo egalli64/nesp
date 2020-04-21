@@ -1,5 +1,5 @@
 /**
- * s36.js
+ * class
  */
 
 class PersonA {

@@ -1,5 +1,5 @@
 /**
- * s37.js
+ * get / set
  */
 
 class PersonB {

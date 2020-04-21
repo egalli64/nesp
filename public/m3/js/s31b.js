@@ -1,6 +1,4 @@
 /**
- * s31b.js
- * 
  * Bind to elements -> they should be in the DOM!
  */
 
