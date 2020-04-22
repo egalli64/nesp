@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Lists</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        #liDisc {
+            list-style-type: disc;
+        }
+
+        #liCircle {
+            list-style-type: circle;
+        }
+
+        #liSquare {
+            list-style-type: square;
+        }
+
+        #liNone {
+            list-style-type: none;
+        }
+
+        #liDecimal {
+            list-style-type: decimal;
+        }
+
+        #liDecimalZero {
+            list-style-type: decimal-leading-zero;
+        }
+
+        #liLowerRoman {
+            list-style-type: lower-roman;
+        }
+
+        #liLowerAlpha {
+            list-style-type: lower-alpha;
+        }
+
+        .redBox {
+            border: 1px solid red;
+        }
+
+        .insideBox {
+            border: 1px solid blue;
+            list-style-position: inside;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lists</h1>
+
+    <h2>Unordered</h2>
+
+    <ul>
+        <li>one</li>
+        <li id="liDisc">two</li>
+        <li id="liCircle">three</li>
+        <li id="liSquare">four</li>
+        <li id="liNone">five</li>
+        <li>six</li>
+    </ul>
+
+    <h2>Ordered</h2>
+
+    <ol>
+        <li>one</li>
+        <li id="liDecimal">two</li>
+        <li id="liDecimalZero">three</li>
+        <li id="liLowerRoman">four</li>
+        <li id="liLowerAlpha">five</li>
+        <li>six</li>
+    </ol>
+
+    <h2>Positioning</h2>
+
+    <ul class="redBox">
+        <li>one</li>
+        <li class="insideBox">two</li>
+        <li>three</li>
+        <li class="redBox">four</li>
+        <li>five</li>
+        <li>six</li>
+    </ul>
+
+</body>
+
+</html>
