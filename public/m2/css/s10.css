@@ -1,19 +1,27 @@
-table {
-    border: 2px solid black;
-    border-collapse: collapse;
-    width: 50%;
+.my20px {
+    font-size: 20px;
 }
 
-td, th {
-    border: 1px solid red;
-    padding: 3px;
-    text-align: center;
+.my30px {
+    font-size: 30px;
 }
 
-th {
-    background-color: lightblue;
+.my05em {
+    font-size: 0.5em;
 }
 
-td {
-    background-color: lightgreen;
+.my50pc {
+    font-size: 50%;
+}
+
+.my05rem {
+    font-size: 0.5rem;
+}
+
+.my10vh {
+    font-size: 10vh;
+}
+
+.my10vw {
+    font-size: 10vw;
 }

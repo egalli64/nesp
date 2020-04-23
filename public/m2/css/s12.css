@@ -1,3 +1,11 @@
-nav>ul>li {
-    display: inline-block;
+div {
+    background-color: lightskyblue;
+}
+
+#hello {
+    margin-top: 10px;
+    border-left-width: 3px;
+    border-style: solid;
+    padding-left: 10px;
+    background-color: aqua;
 }

@@ -1,38 +1,40 @@
-header {
-    text-align: center;
+#liDisc {
+    list-style-type: disc;
 }
 
-section {
-    display: flex;
-    border: 1px solid black;
+#liCircle {
+    list-style-type: circle;
 }
 
-article {
-    padding: 10px;
-    margin: 10px;
+#liSquare {
+    list-style-type: square;
+}
+
+#liNone {
+    list-style-type: none;
+}
+
+#liDecimal {
+    list-style-type: decimal;
+}
+
+#liDecimalZero {
+    list-style-type: decimal-leading-zero;
+}
+
+#liLowerRoman {
+    list-style-type: lower-roman;
+}
+
+#liLowerAlpha {
+    list-style-type: lower-alpha;
+}
+
+.redBox {
     border: 1px solid red;
 }
 
-#container {
-    border: 2px solid black;
-}
-
-.box {
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
-    margin: auto;
-}
-
-#container1 {
-    display: flex;
-    height: 300px;
-    border: 2px solid black;
-}
-
-.box1 {
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
-    margin: auto;
+.insideBox {
+    border: 1px solid blue;
+    list-style-position: inside;
 }

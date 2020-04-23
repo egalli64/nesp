@@ -42,3 +42,15 @@ p.myClass {
 .upperCls {
     text-transform: uppercase;
 }
+
+#bordered {
+    border: black ridge;
+}
+
+#interesting + p {
+    color: blue;
+}
+
+#interesting ~ p {
+    font-style: italic;
+}
