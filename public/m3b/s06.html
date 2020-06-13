@@ -3,19 +3,29 @@
 
 <head>
     <meta charset="utf-8">
-    <title>addEventListener</title>
+    <title>on event</title>
+
+    <!-- could run _before_ loading the DOM -->
+    <script type="text/javascript" src="js/s06a.js" async>
+    </script>
 
     <!-- should run _after_ loading the DOM -->
-    <script type="text/javascript" src="js/s06.js" defer>
+    <script type="text/javascript" src="js/s06b.js" defer>
     </script>
 </head>
 
 <body>
-    <h1>addEventListener</h1>
+    <h1>on event</h1>
 
     <p>
         Back <a href=".">home</a>
     </p>
+
+    <!-- !!! no action !!! -->
+    <form onsubmit="return check();">
+        <input id="x">
+        <button>OK</button>
+    </form>
 
     <!-- !!! no action !!! -->
     <form id="second">

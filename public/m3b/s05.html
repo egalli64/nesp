@@ -3,35 +3,37 @@
 
 <head>
     <meta charset="utf-8">
-    <title>on event</title>
-
-    <!-- could run _before_ loading the DOM -->
-    <script type="text/javascript" src="js/s05a.js" async>
-    </script>
-
-    <!-- should run _after_ loading the DOM -->
-    <script type="text/javascript" src="js/s05b.js" defer>
-    </script>
+    <title>DOM Node</title>
 </head>
 
 <body>
-    <h1>on event</h1>
+    <h1>DOM Node</h1>
 
     <p>
         Back <a href=".">home</a>
     </p>
 
-    <!-- !!! no action !!! -->
-    <form onsubmit="return check();">
-        <input id="x">
-        <button>OK</button>
-    </form>
+    <div>
+        <input type="number" id="counter" value="1">
+        <button id="go">Go</button>
+    </div>
+    <ul id="target">
+    </ul>
 
-    <!-- !!! no action !!! -->
-    <form id="second">
-        <input id="y">
-        <button>OK</button>
-    </form>
+    <script type="text/javascript">
+        let target = document.getElementById('target');
+
+        document.getElementById('go').onclick = () => {
+            target.innerHTML = '';
+            let counter = document.getElementById('counter').value;
+
+            for (let i = 0; i < counter; i++) {
+                let node = document.createElement("li");
+                node.appendChild(document.createTextNode(i+1));
+                target.appendChild(node);
+            }
+        };
+    </script>
 </body>
 
 </html>

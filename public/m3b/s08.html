@@ -3,42 +3,41 @@
 
 <head>
     <meta charset="utf-8">
-    <title>classList</title>
+    <title>Events &amp; attributes</title>
+
+    <!-- could run _before_ loading the DOM -->
+    <script type="text/javascript" src="js/s08a.js" async>
+    </script>
+
 
     <!-- should run _after_ loading the DOM -->
-    <script type="text/javascript" src="js/s08.js" defer>
+    <script type="text/javascript" src="js/s08b.js" defer>
     </script>
 
     <style type="text/css">
-        .back {
+        #box {
+            width: 100px;
+            height: 100px;
             background-color: lightblue;
+            margin-top: 10px;
         }
-
-        .fore {
-            color: red;
-        }
-
-        .borderA {
-            border: 1px black solid;
-        }
-
-        .borderB {
-            border: 2px purple dotted;
-        }    </style>
+    </style>
 </head>
 
 <body>
-    <h1>classList</h1>
+    <h1>Events &amp; attributes</h1>
 
     <p>
         Back <a href=".">home</a>
     </p>
 
-    <div id="target" class="borderA">Target</div>
-    <button id="backAdd">Add background</button>
-    <button id="backRemove">Remove background</button>
-    <button id="foreToggle">Toggle foreground</button>
-    <button id="borderReplace">Replace border</button>
+    <!-- !!! no action !!! -->
+    <form id="f">
+        <input id="x">
+        <button>OK</button>
+    </form>
+
+    <div id="box"></div>
 </body>
 
 </html>
