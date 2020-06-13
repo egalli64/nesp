@@ -3,31 +3,51 @@
 
 <head>
     <meta charset="utf-8">
-    <title>String /1</title>
+    <title>AJAX</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
 </head>
 
 <body>
-    <h1>String /1</h1>
-
+    <h1>Asynchronous JavaScript And XML</h1>
     <p>
         Back <a href=".">home</a>
     </p>
 
     <textarea id="target" rows="20" cols="80"></textarea>
+    <div>
+        <button onclick="getInfoPlain();">Plain AJAX</button>
+        <button onclick="getInfoJQuery();">JQuery AJAX</button>
+    </div>
 
     <script type="text/javascript">
-        let target = document.getElementById('target');
+        function getInfoPlain() {
+            let request = new XMLHttpRequest();
+            request.onload = callback;
+            request.open("GET", "data/tom.json");
+            request.send();
+        }
 
-        let value = 'Solution' + 42;
-        let check = 'Solution' + 42 === 'Solution42';
-        target.value += check + '\n';
+        function callback() {
+            let target = document.getElementById('target');
+            if (this.status != 200) {
+                target.value += "[" + this.status + "]\n";
+                return;
+            }
+            let json = JSON.parse(this.responseText);
 
-        let a = 42;
-        check = a.toString() === '42';
-        target.value += check + '\n';
+            target.value += json.name + '\n';
+            target.value += json.job.title + '\n';
+            target.value += json.job.languages + '\n';
+        }
 
-        check = Number('42') === 42;
-        target.value += check + '\n';
+        function getInfoJQuery() {
+            $.getJSON("data/tom.json", (json) => {
+                let target = document.getElementById('target');
+                target.value += json.name + '\n';
+                target.value += json.job.title + '\n';
+                target.value += json.job.languages + '\n';
+            });
+        }
     </script>
 </body>
 

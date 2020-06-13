@@ -3,50 +3,25 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Operators /1</title>
+    <title>addEventListener</title>
+
+    <!-- should run _after_ loading the DOM -->
+    <script type="text/javascript" src="js/s06.js" defer>
+    </script>
 </head>
 
 <body>
-    <h1>Operators /1</h1>
+    <h1>addEventListener</h1>
 
     <p>
         Back <a href=".">home</a>
     </p>
 
-    <textarea id="target" rows="20" cols="80"></textarea>
-
-    <script type="text/javascript">
-        let target = document.getElementById('target');
-
-        let value = 2 + 3;
-        target.value += value + '\n';
-
-        value = 2 - 3;
-        target.value += value + '\n';
-
-        value = 2 * 3;
-        target.value += value + '\n';
-
-        value = 2 / 3;
-        target.value += value + '\n';
-
-        value = 2 % 3;
-        target.value += value + '\n';
-
-        value = 2 ** 3;
-        target.value += value + '\n';
-
-        // obsolete
-        value = Math.pow(2, 3);
-        target.value += value + '\n';
-
-        target.value += 'pre-increase: ' + ++value + '\n';
-        target.value += 'pre-decrease: ' + --value + '\n';
-        target.value += 'post-increase: ' + value++ + ', ';
-        target.value += value + '\n';
-        target.value += 'post-decrease: ' + value-- + ', ';
-        target.value += value + '\n';
-    </script>
+    <!-- !!! no action !!! -->
+    <form id="second">
+        <input id="y">
+        <button>OK</button>
+    </form>
 </body>
 
 </html>

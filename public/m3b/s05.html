@@ -3,50 +3,35 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Variables</title>
+    <title>on event</title>
+
+    <!-- could run _before_ loading the DOM -->
+    <script type="text/javascript" src="js/s05a.js" async>
+    </script>
+
+    <!-- should run _after_ loading the DOM -->
+    <script type="text/javascript" src="js/s05b.js" defer>
+    </script>
 </head>
 
 <body>
-    <h1>Variables</h1>
+    <h1>on event</h1>
 
     <p>
         Back <a href=".">home</a>
     </p>
 
-    <textarea id="target" rows="20" cols="80"></textarea>
+    <!-- !!! no action !!! -->
+    <form onsubmit="return check();">
+        <input id="x">
+        <button>OK</button>
+    </form>
 
-    <script type="text/javascript">
-        let target = document.getElementById('target');
-
-        // string
-        let name = 'Bob';
-        target.value += 'hello ' + name + ' (' + typeof name + ')\n';
-
-        // number
-        let value = 42;
-        target.value += value + ' (' + typeof value + ')\n';
-
-        // boolean
-        let flag = true;
-        target.value += flag + ' (' + typeof flag + ')\n';
-
-        // object
-        let dog = { name: 'Zip', breed: 'Alsatian' };
-        target.value += dog + '\n';
-        target.value += dog.name + ' is an ' + dog.breed + ' (' + typeof dog + ')\n';
-
-        // array is kind of object
-        let data = [1, 'Tom', false];
-        target.value += data + ' (' + typeof data + ')\n';
-
-        // const number
-        const z = 42;
-        target.value += z + ' is constant (' + typeof z + ')\n';
-
-        let x;
-        let y = null;
-        target.value += x + ' (' + typeof x + '), ' + y + ' (' + typeof y + ')\n';
-    </script>
+    <!-- !!! no action !!! -->
+    <form id="second">
+        <input id="y">
+        <button>OK</button>
+    </form>
 </body>
 
 </html>

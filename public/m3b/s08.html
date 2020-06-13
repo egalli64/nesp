@@ -3,46 +3,42 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Operators /3</title>
+    <title>classList</title>
+
+    <!-- should run _after_ loading the DOM -->
+    <script type="text/javascript" src="js/s08.js" defer>
+    </script>
+
+    <style type="text/css">
+        .back {
+            background-color: lightblue;
+        }
+
+        .fore {
+            color: red;
+        }
+
+        .borderA {
+            border: 1px black solid;
+        }
+
+        .borderB {
+            border: 2px purple dotted;
+        }    </style>
 </head>
 
 <body>
-    <h1>Operators /3</h1>
+    <h1>classList</h1>
 
     <p>
         Back <a href=".">home</a>
     </p>
 
-    <textarea id="target" rows="20" cols="80"></textarea>
-
-    <script type="text/javascript">
-        let target = document.getElementById('target');
-
-        let value = 2;
-        let check = value === 2;
-        target.value += check + '\n';
-
-        check = value !== 3;
-        target.value += check + '\n';
-
-        check = value < 2;
-        target.value += check + '\n';
-
-        check = value <= 2;
-        target.value += check + '\n';
-
-        check = value > 2;
-        target.value += check + '\n';
-
-        check = value >= 2;
-        target.value += check + '\n';
-
-        check = value == '2';
-        target.value += check + '\n';
-
-        check = value != '2';
-        target.value += check + '\n';
-    </script>
+    <div id="target" class="borderA">Target</div>
+    <button id="backAdd">Add background</button>
+    <button id="backRemove">Remove background</button>
+    <button id="foreToggle">Toggle foreground</button>
+    <button id="borderReplace">Replace border</button>
 </body>
 
 </html>

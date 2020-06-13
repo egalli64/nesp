@@ -10,7 +10,7 @@
     <h1>BOM</h1>
 
     <p>
-        Back <a href=".#jsHtml">home</a>
+        Back <a href=".">home</a>
     </p>
 
     <textarea id="target" rows="20" cols="80"></textarea>
@@ -22,8 +22,8 @@
     <script type="text/javascript">
         let target = document.getElementById('target');
 
-        target.value += `window heights: ${window.outerHeight}, ${window.innerHeight}
-window widths: ${window.outerWidth}, ${window.innerWidth}\n`;
+        target.value += `window heights: ${window.outerHeight}, ${window.innerHeight}\n`;
+        target.value += `window widths: ${window.outerWidth}, ${window.innerWidth}\n`;
 
         function checkConfirm() {
             if (!confirm('confirm?')) {
