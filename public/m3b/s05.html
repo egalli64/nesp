@@ -24,12 +24,16 @@
         let target = document.getElementById('target');
 
         document.getElementById('go').onclick = () => {
-            target.innerHTML = '';
+            // target.innerHTML = '';
+            while (target.firstChild) {
+                target.removeChild(target.firstChild);
+            }
+
             let counter = document.getElementById('counter').value;
 
             for (let i = 0; i < counter; i++) {
                 let node = document.createElement("li");
-                node.appendChild(document.createTextNode(i+1));
+                node.appendChild(document.createTextNode(i + 1));
                 target.appendChild(node);
             }
         };
