@@ -28,3 +28,8 @@ console.log('after two pushes and one unshift', data);
 
 data.splice(1, 2);
 console.log('splice from 1 of 2 items', data);
+
+console.log('there is no data[5]:', data[5]);
+data[5] = 42;
+console.log("Now there is a hole in the array ...", data);
+console.log('data[3] is missing:', data[3]);
