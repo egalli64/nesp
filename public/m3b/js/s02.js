@@ -5,5 +5,5 @@
  */
 
 let target = document.getElementById('target');
-target.textContent = 'Hello!';
+target.textContent = 'Current date-time: ' + new Date();
 console.log('hello!');
