@@ -5,12 +5,16 @@
     <meta charset="utf-8">
     <title>Events &amp; attributes</title>
 
-    <!-- could run _before_ loading the DOM -->
-    <script type="text/javascript" src="js/s08a.js" async>
+    <!-- should run _before_ loading the DOM -->
+    <script type="text/javascript" src="js/s08a.js">
     </script>
 
     <!-- should run _after_ loading the DOM -->
     <script type="text/javascript" src="js/s08b.js" defer>
+    </script>
+
+    <!-- could run before _or_ after loading the DOM -->
+    <script type="text/javascript" src="js/s08c.js" async>
     </script>
 
     <style type="text/css">
@@ -37,6 +41,10 @@
     </form>
 
     <div id="box"></div>
+
+    <div>
+        <button onclick="changeBackColor();">Click me</button>
+    </div>
 </body>
 
 </html>
