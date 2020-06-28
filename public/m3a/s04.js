@@ -11,9 +11,14 @@ let flag = true;
 console.log(flag, typeof flag);
 
 // object
-let dog = { name: 'Zip', breed: 'Alsatian' };
+let dog = {
+    name: 'Zip',
+    breed: 'Alsatian'
+};
+
 console.log(dog, typeof dog);
-console.log(dog.name + ' is an ' + dog.breed);
+console.log(dog.name + ' breed is ' + dog.breed);
+console.log(dog['name'] + 'breed is ' + dog['breed']);
 
 // array is kind of object
 let data = [1, 'Tom', false];

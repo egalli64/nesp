@@ -12,7 +12,6 @@ function PersonEx(first, middle, last) {
     this.helloEx = () => this.hello() + ' ' + this.middle;
 }
 
-
 let p = new Person('Tom', 'Jones');
 console.log(p);
 let q = new PersonEx('Quincy', 'H.', 'Jones');
@@ -20,3 +19,4 @@ console.log(q);
 
 console.log('Tom', p.hello());
 console.log('Quincy', q.helloEx());
+console.log('Quincy', q.hello());
