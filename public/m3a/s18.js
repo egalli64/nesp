@@ -1,4 +1,4 @@
-console.log(Math.E, Math.SQRT2, Math.PI);
+let now = new Date();
 
-console.log(Math.max(Math.E, Math.SQRT2, Math.PI));
-console.log(Math.min(Math.E, Math.SQRT2, Math.PI));
+console.log(now);
+console.log("Today is " + now.getDate() + ", month " + (now.getMonth() + 1));

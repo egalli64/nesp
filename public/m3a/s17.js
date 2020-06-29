@@ -1,22 +1,4 @@
-function Person(first, last) {
-    this.first = first;
-    this.last = last;
+console.log('three interesting numbers:', Math.E, Math.SQRT2, Math.PI);
 
-    this.hello = () => 'Hello from ' + this.first;
-}
-
-function PersonEx(first, middle, last) {
-    Person.call(this, first, last);
-    this.middle = middle;
-
-    this.helloEx = () => this.hello() + ' ' + this.middle;
-}
-
-let p = new Person('Tom', 'Jones');
-console.log(p);
-let q = new PersonEx('Quincy', 'H.', 'Jones');
-console.log(q);
-
-console.log('Tom', p.hello());
-console.log('Quincy', q.helloEx());
-console.log('Quincy', q.hello());
+console.log('biggest one:', Math.max(Math.E, Math.SQRT2, Math.PI));
+console.log('smallest one:', Math.min(Math.E, Math.SQRT2, Math.PI));
