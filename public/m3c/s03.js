@@ -1,42 +1,47 @@
-let f1 = () => 'hello from f1';
-console.log('calling f1 ...', f1());
+// arguments
+function f1() {
+    let result = 0;
+    for(let i = 0; i < arguments.length; i++) {
+        console.log('processing', arguments[i]);
+        result += arguments[i];
+    }
 
-let f2 = () => {
-    console.log('hello from f2');
+    return result;
+}
+console.log('f1 result is', f1(5, 8, 7));
+
+// arrow notation
+let f2 = () => 'hello from f2';
+console.log('calling f2 ...', f2());
+
+// arrow notation /2
+let f3 = () => {
+    console.log('hello from f3');
     return 'done';
 }
-f2();
+console.log('calling f3 ...', f3());
 
-let f3a = () => {
+// no "this" in lambda
+let f4 = () => {
     console.log('lambda "this"', this);
 }
+f4();
 
-function f3b() {
-    console.log('plain function "this"', this);
+// default parameter
+let f5 = (x = 0) => {
+    console.log('x is ...', x);
 }
+f5();
+f5(42);
 
-f3a();
-f3b();
+// rest parameter
+function f6(... va) {
+    let result = 0;
+    for(let i = 0; i < va.length; i++) {
+        console.log('processing', va[i]);
+        result += va[i];
+    }
 
-/*
-let x = function () {
-    console.log('hello from an anonymous function');
+    return result;
 }
-
-console.log('calling the anonymous function stored in x');
-x();
-
-function g(a, b) {
-    return a + b;
-}
-
-console.log('passing numbers to function g() ...', g(2, 3));
-
-console.log('passing strings to function g() ...', g('Hello', 'World'));
-
-
-let adder = (a, b) => a + b;
-
-console.log('passing numbers to the anonymous function stored in adder ...', adder(2, 3));
-console.log('passing strings to the anonymous function stored in adder ...', adder('Hello', 'World'));
-*/
+console.log('f6 result is', f1(5, 8, 7));
