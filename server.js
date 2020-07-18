@@ -9,6 +9,6 @@ app.get('/hello', function (req, res) {
     res.send('{"message": "Hello World!"}');
 });
 
-app.listen(port, function () {
-    console.log('Listening on port ' + port);
+app.listen(function () {
+    console.log('Nesp is listening');
 });
