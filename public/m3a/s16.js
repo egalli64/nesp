@@ -1,7 +1,7 @@
 let person = {
     first: 'Tom',
     last: 'Slick',
-    hello: () => 'Hello from ' + this.first
+    hello: function () { return 'Hello from ' + this.first; }
 };
 
 console.log('An object ...', person);
@@ -33,4 +33,10 @@ let p1 = new Person('Bob', 'Slowe');
 let p2 = new Person('Tim', 'Hare');
 
 console.log('A person ...', p1);
-console.log(p2.hello());
+console.log("p2:", p2.hello());
+
+let p3 = Object.create(p1);
+
+console.log('An object created via prototype', p3);
+console.log("p3:", p3.hello());
+console.log("p1 and p3 are different Persons:", p3 !== p1);
