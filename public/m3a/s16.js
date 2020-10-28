@@ -30,6 +30,7 @@ data.push('push2');
 data.unshift('unshift');
 console.log('after two pushes and one unshift', data);
 
+// go to position 1, remove two items
 data.splice(1, 2);
 console.log('splice from 1 of 2 items', data);
 
