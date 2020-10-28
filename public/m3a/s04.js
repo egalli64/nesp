@@ -1,3 +1,7 @@
+/**
+ * Variables
+ */
+
 // string
 let name = 'Bob';
 console.log(name, typeof name);

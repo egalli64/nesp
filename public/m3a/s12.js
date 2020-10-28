@@ -1,35 +1,46 @@
-let data = [1, 'hello', [true, 42.24]];
+/**
+ * Object
+ */
 
-console.log('data', data);
-console.log('length', data.length);
-console.log('last item', data[data.length - 1]);
-console.log('item 1 of last item', data[data.length - 1][1]);
+let person = {
+    first: 'Tom',
+    last: 'Slick',
+    hello: function () { return 'Hello from ' + this.first; }
+};
 
-data[2] = false;
-console.log('data[2]', data[2]);
-console.log('data', data);
+console.log('An object ...', person);
+console.log('First name is', person.first);
+console.log('Last name is', person['last']);
 
-console.log('Loop on all items');
-for (let i = 0; i < data.length; i++) {
-    console.log(data[i]);
+delete person.last;
+console.log('deleted last', person);
+person.middle = 'H.';
+console.log('added middle', person);
+
+person.quack = function() {
+    return "quack!";
 }
 
-console.log('joined', data.join());
-console.log('to string', data.toString());
+console.log('added quack() method', person);
+console.log('calling quack() on person', person.quack());
 
-console.log('pop', data.pop());
-console.log('shift', data.shift());
-console.log('data', data);
+function Person(first, last) {
+    this.first = first;
+    this.last = last;
 
-data.push('push1');
-data.push('push2');
-data.unshift('unshift');
-console.log('after two pushes and one unshift', data);
+    this.hello = function() {
+        return 'Hello from ' + this.first;
+    }
+}
 
-data.splice(1, 2);
-console.log('splice from 1 of 2 items', data);
+let p1 = new Person('Bob', 'Slowe');
+let p2 = new Person('Tim', 'Hare');
 
-console.log('there is no data[5]:', data[5]);
-data[5] = 42;
-console.log("Now there is a hole in the array ...", data);
-console.log('data[3] is missing:', data[3]);
+console.log('A person ...', p1);
+console.log("p2:", p2.hello());
+
+let p3 = Object.create(p1);
+
+console.log('An object created via prototype', p3);
+console.log("p3:", p3.hello());
+console.log("p1 and p3 are different Persons:", p3 !== p1);

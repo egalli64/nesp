@@ -1,29 +1,24 @@
-let value = 2 + 3;
-console.log('2 + 3 is', value);
+/**
+ * Arithmetic operators
+ */
 
-value = 2 - 3;
-console.log('2 - 3 is', value);
+console.log('2 + 3 is', 2 + 3);
+console.log('0.1 + 0.2 is', 0.1 + 0.2, '(floating point addition)');
 
-value = 2 * 3;
-console.log('2 * 3 is', value);
+console.log('2 - 3 is', 2 - 3);
 
-value = 2 / 3;
-console.log('2 / 3 is', value);
+console.log('2 * 3 is', 2 * 3);
 
-value = 2 % 3;
-console.log('2 % 3 is', value);
+console.log('2 / 3 is', 2 / 3, '(floating point division)');
 
-value = 2.3 % 2.1;
-console.log('2.3 % 2.1 is', value);
+console.log('2 % 3 is', 2 % 3);
+console.log('2.3 % 2.1 is', 2.3 % 2.1);
 
+console.log('cube of 2 is', Math.pow(2, 3), '(classic)');
+console.log('cube of 2 is', 2 ** 3, '(ES 6)' );
 
-value = 2 ** 3;
-console.log('2**3 is', value);
-
-// obsolete
-value = Math.pow(2, 3);
-console.log('cube of 2 is', value);
-
+let value = 8;
+console.log('initial value', value);
 console.log('pre-increment', ++value);
 console.log('pre-decrement', --value);
 console.log('post-increment', value++);

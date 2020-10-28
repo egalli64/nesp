@@ -1,3 +1,7 @@
+/**
+ * Logical (and bitwise) operators
+ */
+
 let alpha = true;
 let beta = false;
 

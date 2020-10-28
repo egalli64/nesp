@@ -1,19 +1,16 @@
-for (let i = 0; i < 3; i++) {
-    console.log('for', i);
-}
+/**
+ * String
+ */
 
-let i = 0;
-while (i < 3) {
-    console.log('while', i);
-    i += 1;
-}
+let value = 'Solution' + 42;
+console.log('Concatenating string with a number lead to a new string', value, 'Solution' + 42 === 'Solution42');
 
-i = 10;
-do {
-    if (i < 0 || i > 3) {
-        i = 0;
-        continue;
-    }
-    console.log('do-while', i);
-    i++;
-} while (i < 3);
+let a = 42;
+console.log('Explicit conversion number to string', a, a.toString() === '42');
+
+console.log('Explicit conversion string to number', Number('42.7') === 42.7);
+
+console.log('Explicit conversion string to int', parseInt('42') === 42);
+
+console.log('Do not parseInt() instead of Math.floor()', parseInt('42.7') === 42);
+console.log('Parsing a non number as int leads to NaN', isNaN(parseInt('hello')));

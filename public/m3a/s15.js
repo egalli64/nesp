@@ -1,29 +1,30 @@
-function f() {
-    console.log('hello from f()');
-}
+/**
+ * String /2
+ */
 
-function g(a, b) {
-    return a + b;
-}
+let s = 'Tom,Bob,Sally';
+console.log(s);
+console.log('length', s.length);
+console.log('first char', s[0], s.charAt(0));
+console.log('last char', s[s.length - 1]);
 
-console.log('calling function f()');
-f();
+let idx = s.indexOf('Bob');
+console.log("index of Bob", idx);
+console.log("index of Bill", s.indexOf('Bill'));
+console.log("Tom is at the beginning?", s.startsWith('Tom'));
+console.log("Sally is at the end?", s.endsWith('Sally'));
+console.log("Bob is in?", s.includes('Bob'));
 
-let result = g(3, 5);
-console.log('g(3, 5)', result);
+let end = s.indexOf(',', idx);
+console.log("next comma position", end);
+console.log('slice [' + idx + '..' + end + ')', s.slice(idx, end));
 
-let fa = function () {
-    console.log('hello from an anonymous function');
-}
+console.log('lower', s.toLowerCase());
+console.log('upper', s.toUpperCase());
 
-console.log('calling the anonymous function stored in fa');
-fa();
+console.log('Bill instead of Bob: ' + s.replace('Bob', 'Bill'));
 
-let ga = function(a, b) {
-    return a + b;
-}
-
-console.log('passing numbers to the anonymous function stored in ga ...', ga(2, 3));
-console.log('passing strings to the anonymous function stored in ga ...', ga('Hello', 'World'));
-
-console.log("add a number to undefined and you get Not a Number ...", ga(42));
+let array = s.split(',');
+console.log('array', array);
+console.log('First', array[0]);
+console.log('Last', array[array.length-1]);

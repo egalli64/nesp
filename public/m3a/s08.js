@@ -1,3 +1,7 @@
+/**
+ * Truthy and falsy
+ */
+
 if (!undefined) {
     console.log('undefined is falsy');
 }

@@ -1,3 +1,7 @@
+/**
+ * Relational operators
+ */
+
 let value = 2;
 
 console.log('value is', typeof value, value);
