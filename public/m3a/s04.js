@@ -18,14 +18,18 @@ let dog = {
 
 console.log(dog, typeof dog);
 console.log(dog.name + ' breed is ' + dog.breed);
-console.log(dog['name'] + 'breed is ' + dog['breed']);
+console.log(dog['name'] + ' breed is ' + dog['breed']);
 
-// array is kind of object
+// array is kind of an object
 let data = [1, 'Tom', false];
 console.log(data, typeof data);
 
 // const number
 const z = 42;
+
+// uncomment next line to get TypeError: Assignment to constant variable
+// z += 1;
+
 console.log(z + ' is a constant (' + typeof z + ')');
 
 let x;
@@ -35,4 +39,4 @@ console.log(y, typeof y);
 
 // type change
 dog = 12;
-console.log('dog new life', dog, typeof dog);
+console.log('dog new life:', dog, typeof dog);
