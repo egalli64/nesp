@@ -14,11 +14,11 @@ inputX.onfocus = () => {
 };
 
 inputX.onblur = () => {
-    console.log('x blurred')
+    console.log('x blurred');
 };
 
 inputX.onchange = () => {
-    console.log('x changed')
+    console.log('x changed');
 };
 
 let box = document.getElementById('box');

@@ -17,17 +17,17 @@
         <input type="number" id="counter" value="1">
         <button id="go">Go</button>
     </div>
-    <ul id="target">
-    </ul>
+    <ul id="target"></ul>
 
     <script type="text/javascript">
         let target = document.getElementById('target');
 
-        document.getElementById('go').onclick = () => {
-            // target.innerHTML = '';
-            while (target.firstChild) {
+        let go = document.getElementById('go');
+        go.onclick = function () {
+            target.innerHTML = '';
+/*            while (target.firstChild) {
                 target.removeChild(target.firstChild);
-            }
+            }*/
 
             let counter = document.getElementById('counter').value;
 
