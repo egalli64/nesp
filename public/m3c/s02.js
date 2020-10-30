@@ -1,3 +1,4 @@
+/** function constructor for Persons */
 function Person(first, last) {
     this.first = first;
     this.last = last;
@@ -7,6 +8,7 @@ function Person(first, last) {
     }
 }
 
+/** PersonEx inherits from Person */
 function PersonEx(first, middle, last) {
     Person.call(this, first, last);
     this.middle = middle;
