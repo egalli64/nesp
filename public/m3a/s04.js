@@ -36,10 +36,12 @@ const z = 42;
 
 console.log(z + ' is a constant (' + typeof z + ')');
 
+console.log('functions are kind of objects, but their typeof is ...', typeof console.log);
+
 let x;
 let y = null;
-console.log(x, typeof x);
-console.log(y, typeof y);
+console.log(x, 'has typeof ...', typeof x);
+console.log(y, 'has typeof ...', typeof y);
 
 // type change
 dog = 12;
