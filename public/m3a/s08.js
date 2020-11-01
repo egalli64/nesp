@@ -14,6 +14,15 @@ if (!0) {
 if (!-0) {
     console.log('-0 is falsy');
 }
+
+// NaN
+let mistake = Math.sqrt(-1);
+console.log(`Square root of -1 is ${mistake}!`);
+
+if(mistake != mistake) {
+    console.log("NaN is strange, isn't it?");
+}
+
 if (!NaN) {
     console.log('NaN is falsy');
 }

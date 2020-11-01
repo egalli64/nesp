@@ -2,15 +2,22 @@
  * String
  */
 
-let value = 'Solution' + 42;
-console.log('Concatenating string with a number lead to a new string', value, 'Solution' + 42 === 'Solution42');
+// three ways of delimiting a string
+let a = 'the ';
+let b = "answer ";
+let c = `is `;
 
-let a = 42;
-console.log('Explicit conversion number to string', a, a.toString() === '42');
+// "adding" string -> concatenation, numbers are implicitly converted to string
+let d = 42;
+let e = a + b + c + 42;
+console.log('implicit conversion number to string:', e, e === 'the answer is 42');
 
-console.log('Explicit conversion string to number', Number('42.7') === 42.7);
+// using template literals
+console.log(`The answer is ${d}!`);
 
-console.log('Explicit conversion string to int', parseInt('42') === 42);
+console.log('Explicit conversion number to string:', d, d.toString() === '42');
+console.log('Explicit conversion string to number:', Number('42.7') === 42.7);
+console.log('Explicit conversion string to int:', parseInt('42') === 42);
 
-console.log('Do not parseInt() instead of Math.floor()', parseInt('42.7') === 42);
-console.log('Parsing a non number as int leads to NaN', isNaN(parseInt('hello')));
+console.log("Usually it works, but don't trust it, use Math.floor() instead:", parseInt('42.7') === 42);
+console.log('Parsing a non number as int leads to NaN:', isNaN(parseInt('hello')));

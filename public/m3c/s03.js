@@ -27,12 +27,11 @@ let f4 = () => {
 }
 f4();
 
-// default parameter
-let f5 = (x = 0) => {
-    console.log('x is ...', x);
-}
-f5();
-f5(42);
+let f5a = x => x;
+console.log('no default parameter:', f5a(), f5a(42));
+
+let f5b = (x = 0) => x;
+console.log('default parameter:', f5b(), f5b(42));
 
 // rest parameter
 function f6(... va) {
@@ -48,3 +47,8 @@ console.log('f6 result is', f6(5, 8, 7));
 
 // use apply to splat an array into function parameters
 console.log('f6 result is', f6.apply(null, [5, 8, 7]));
+
+let f7 = (... va) => va.length;
+
+console.log(`calling f7 with ${f7(1, 2, 3)} parameters`);
+console.log(`calling f7 with ${f7()} parameter`);

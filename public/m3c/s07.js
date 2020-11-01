@@ -1,34 +1,44 @@
+/*
+ * More methods on arrays
+ */
+
 let data = new Array(5);
-console.log('data', data);
+console.log('An array sized 5 but with nothing in it', data);
 
 data.fill(0);
-console.log('data filled', data);
+console.log('Better now, filled with zeroes', data);
 
-let splits = Array.from('hello');
-console.log('string split', splits);
+let hello = Array.from('hello');
+console.log('Generating an array _from_ a string', hello);
 
-let slices = splits.slice(2, 4);
-console.log('a slice of splits', slices);
+let aSlice = hello.slice(2, 4);
+console.log('A slice of an array', aSlice);
 
-splits.sort();
-console.log('sorted split', splits);
+hello.sort();
+console.log('Sorted hello array', hello);
 
-splits.sort(
-    (left, right) => left == right ? 0 :
-        left < right ? 1 : -1);
-console.log('sorted desc split', splits);
+hello.sort((left, right) => left == right ? 0 : left < right ? 1 : -1);
+console.log('Custom sort on hello', hello);
 
-splits.reverse();
-console.log('reversed split', splits);
+hello.reverse();
+console.log('Reversed array', hello);
 
-splits.forEach((x, i) => console.log(i, x));
+hello.forEach(item => console.log(item));
+hello.forEach((item, pos) => console.log(`${pos}: ${item}`));
 
-if(slices.every(s => s == 'l')) {
-    console.log("every item in slices is a lowercase l");
+if (aSlice.every(s => s == 'l')) {
+    console.log("Every item in aSlices is a lowercase l");
 }
 
-let filters = splits.filter(s => s > 'h');
-console.log('split more than h', filters);
+let filters = hello.filter(s => s > 'h');
+console.log('Filted hello, more than "h"', filters);
 
-let uppers = splits.map(s => s.toUpperCase());
-console.log('split to uppercase', uppers);
+let uppers = hello.map(s => s.toUpperCase());
+console.log('Mapped array to uppercase', uppers);
+
+console.log('First L is in position', uppers.indexOf('L'));
+console.log('Last L is in position', uppers.lastIndexOf('L'));
+
+let numbers = [1, 2, 3, 4, 5];
+let product = numbers.reduce((a, b) => a * b);
+console.log(`Reducing ${numbers} by multiplication: ${product}`);
