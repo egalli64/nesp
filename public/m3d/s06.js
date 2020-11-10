@@ -3,7 +3,7 @@
 // reject
 let a = Promise.reject();
 console.log("Promise 'a' created");
-a.then(() => console.log("No fulfill for promise 'a'"))
+a.then(() => { throw new Error("You won't get this"); })
     .catch(() => console.log("Promise 'a' rejected"));
 
 // failure
@@ -23,15 +23,27 @@ function calc(a, b, op) {
     });
 }
 
-console.log("A promise resolved, 4 * 3");
+function logResult(res) {
+    console.log(`Result is ${res}`);
+}
+
+function logError(err) {
+    console.log(`Failure: ${err}`);
+}
+
+console.log("calling calc, a promise resolved, 4 * 3");
 
 calc(4, 3, multiply)
-    .then(res => console.log("Result is", res))
-    .catch(err => console.log("Error is", err));
+    .then(logResult)
+    .catch(logError);
 
-
-console.log("A promise rejected, 4 * 'hello'");
+console.log("calling calc, promise rejected, 4 * 'hello'");
 
 calc(4, 'hello', multiply)
-    .then(res => console.log("Result is", res))
-    .catch(err => console.log("Error:", err));
+    .then(logResult)
+    .catch(logError);
+
+console.log("calling calc, promise rejected, version 2");
+
+calc(4, 'hello', multiply)
+    .then(logResult, logError);

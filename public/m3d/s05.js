@@ -16,15 +16,13 @@ console.log("Promise 'b' resolved");
 b.then(value => console.log("Result from promise 'b' is", value));
 
 // new /1
-let c = new Promise(resolve => { resolve(multiply(6, 3)); });
+let c = new Promise(resolve => resolve(multiply(6, 3)));
 console.log("Promise 'c' created");
 c.then(value => console.log("Result from promise 'c' is", value));
 
 // new /2
 function calc(operation, left, right) {
-    return new Promise(resolve => {
-        resolve(operation(left, right));
-    });
+    return new Promise(resolve => resolve(operation(left, right)));
 }
 
 calc(multiply, 6, 8).then(

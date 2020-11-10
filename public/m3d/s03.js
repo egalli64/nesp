@@ -9,7 +9,7 @@ function multiply(a, b) {
 }
 
 function calculator(a, b, op) {
-    console.log(`Input was ${a} and ${b}, result is ${op(a, b)}`);
+    console.log(`Calling ${op.name} on ${a} and ${b}, result is ${op(a, b)}`);
 }
 
 calculator(6, 7, add);
@@ -18,22 +18,21 @@ calculator(6, 7, multiply);
 // split callbacks - success vs failure
 
 function calc(a, b, op, success, failure) {
-    let result = op(a, b);
-
-    if(isNaN(result)) {
-        failure(result);
+    if (typeof a != 'number' || typeof b != 'number') {
+        failure(`can't ${op.name} ${a} and ${b}`);
     } else {
+        let result = op(a, b);
         success(result);
     }
 }
 
-function printResult(res) {
+function logResult(res) {
     console.log(`Result is ${res}`);
 }
 
-function printError(err) {
-    console.log(`Failure: ${err}!`);
+function logError(err) {
+    console.log(`Failure: ${err}`);
 }
 
-calc(6, 7, multiply, printResult, printError);
-calc(6, 'hello', multiply, printResult, printError);
+calc(6, 7, multiply, logResult, logError);
+calc(6, 'hello', multiply, logResult, logError);

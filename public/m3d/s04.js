@@ -21,31 +21,31 @@ function calc(a, b, op, success, failure) {
     }
 }
 
-function printResult(res) {
+function logResult(res) {
     console.log(`Result is ${res}`);
 }
 
-function printError(err) {
+function logError(err) {
     console.log(`Failure: ${err}`);
 }
 
 // (7 * 5 + 1) / 3
 calc(7, 5, mult,
     res => calc(res, 1, add,
-        res => calc(res, 3, div, printResult, printError),
-        printError),
-    printError);
+        res => calc(res, 3, div, logResult, logError),
+        logError),
+    logError);
 
 // (7 * 'hello' + 1) / 3
 calc(7, 'hello', mult, res =>
     calc(res, 1, add,
-        res => calc(res, 3, div, printResult, printError),
-        printError),
-    printError);
+        res => calc(res, 3, div, logResult, logError),
+        logError),
+    logError);
 
 // (7 * 5 + 1) / 'hello'
 calc(7, 5, mult, res =>
     calc(res, 1, add,
-        res => calc(res, 'hello', div, printResult, printError),
-        printError),
-    printError);
+        res => calc(res, 'hello', div, logResult, logError),
+        logError),
+    logError);
