@@ -1,10 +1,10 @@
 // Promise - failure
 
 // reject
-let a = Promise.reject();
-console.log("Promise 'a' created");
-a.then(() => { throw new Error("You won't get this"); })
-    .catch(() => console.log("Promise 'a' rejected"));
+console.log("A rejected promise");
+Promise.reject()
+    .then(() => { throw new Error("You won't get this"); })
+    .catch(() => console.log("Promise rejected"));
 
 // failure
 function multiply(a, b) {
