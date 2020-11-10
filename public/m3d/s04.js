@@ -1,32 +1,51 @@
-// Promise
+// callback hell
 
-// resolve /1
-let a = Promise.resolve(42.42);
-console.log("Promise 'a' resolved");
-a.then(value => console.log("Result from promise 'a' is", value));
+function add(a, b) {
+    return a + b;
+}
 
-// resolve /2
-function multiply(a, b) {
-    console.log(`multiplying ${a} by ${b} ...`)
+function mult(a, b) {
     return a * b;
 }
 
-let b = Promise.resolve(multiply(6, 7));
-console.log("Promise 'b' resolved");
-b.then(value => console.log("Result from promise 'b' is", value));
-
-// new /1
-let c = new Promise(resolve => { resolve(multiply(6, 3)); });
-console.log("Promise 'c' created");
-c.then(value => console.log("Result from promise 'c' is", value));
-
-// new /2
-function calc(operation, left, right) {
-    return new Promise(resolve => {
-        resolve(operation(left, right));
-    });
+function div(a, b) {
+    return a / b;
 }
 
-calc(multiply, 6, 8).then(
-    value => console.log("Result from promise returned by 'calc' is", value)
-);
+function calc(a, b, op, success, failure) {
+    if (typeof a != 'number' || typeof b != 'number') {
+        failure(`can't ${op.name} ${a} and ${b}`);
+    } else {
+        let result = op(a, b);
+        success(result);
+    }
+}
+
+function printResult(res) {
+    console.log(`Result is ${res}`);
+}
+
+function printError(err) {
+    console.log(`Failure: ${err}`);
+}
+
+// (7 * 5 + 1) / 3
+calc(7, 5, mult,
+    res => calc(res, 1, add,
+        res => calc(res, 3, div, printResult, printError),
+        printError),
+    printError);
+
+// (7 * 'hello' + 1) / 3
+calc(7, 'hello', mult, res =>
+    calc(res, 1, add,
+        res => calc(res, 3, div, printResult, printError),
+        printError),
+    printError);
+
+// (7 * 5 + 1) / 'hello'
+calc(7, 5, mult, res =>
+    calc(res, 1, add,
+        res => calc(res, 'hello', div, printResult, printError),
+        printError),
+    printError);

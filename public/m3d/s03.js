@@ -1,6 +1,4 @@
-/**
- * callback
- */
+// callback
 
 function add(a, b) {
     return a + b;
@@ -19,7 +17,7 @@ calculator(6, 7, multiply);
 
 // split callbacks - success vs failure
 
-function splitCalc(a, b, op, success, failure) {
+function calc(a, b, op, success, failure) {
     let result = op(a, b);
 
     if(isNaN(result)) {
@@ -37,5 +35,5 @@ function printError(err) {
     console.log(`Failure: ${err}!`);
 }
 
-splitCalc(6, 7, multiply, printResult, printError);
-splitCalc(6, 'hello', multiply, printResult, printError);
+calc(6, 7, multiply, printResult, printError);
+calc(6, 'hello', multiply, printResult, printError);
