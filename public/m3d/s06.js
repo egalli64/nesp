@@ -8,17 +8,30 @@ a.then(() => console.log("No fulfill for promise 'a'"))
 
 // failure
 function multiply(a, b) {
-    console.log(`multiplying ${a} by ${b} ...`);
-
-    let result = a * b;
-    if(isNaN(result)) {
-        throw new Error("Expected numbers as input");
-    }
-
-    return result;
+    console.log(`multiplying ${a} by ${b} ...`)
+    return a * b;
 }
 
-let b = Promise.resolve(multiply(6, 'hello'));
-console.log("Promise 'b' resolved");
-b.then(() => console.log("No fulfill for promise 'b'"))
-    .catch(err => console.log("Promise 'b' rejected:", err));
+function calc(a, b, op) {
+    return new Promise((resolve, reject) => {
+        if (typeof a != 'number' || typeof b != 'number') {
+            reject(`can't ${op.name} ${a} and ${b}`);
+        } else {
+            let result = op(a, b);
+            resolve(result);
+        }
+    });
+}
+
+console.log("A promise resolved, 4 * 3");
+
+calc(4, 3, multiply)
+    .then(res => console.log("Result is", res))
+    .catch(err => console.log("Error is", err));
+
+
+console.log("A promise rejected, 4 * 'hello'");
+
+calc(4, 'hello', multiply)
+    .then(res => console.log("Result is", res))
+    .catch(err => console.log("Error:", err));
