@@ -1,49 +1,47 @@
-// Promise - failure
+// How to create a promise via resolve()
 
-// reject
-console.log("A rejected promise");
-Promise.reject()
-    .then(() => { throw new Error("You won't get this"); })
-    .catch(() => console.log("Promise rejected"));
+// resolve a value
+console.log("Resolve a value");
 
-// failure
+let param = 42.42;
+
+Promise.resolve(param)
+    .then(res => console.log("resolved ->", res));
+
+// resolve a function that leads to a value
+console.log("Resolve a value /2");
+
 function multiply(a, b) {
     console.log(`multiplying ${a} by ${b} ...`)
     return a * b;
 }
 
-function calc(a, b, op) {
-    return new Promise((resolve, reject) => {
-        if (typeof a != 'number' || typeof b != 'number') {
-            reject(`can't ${op.name} ${a} and ${b}`);
-        } else {
-            let result = op(a, b);
-            resolve(result);
-        }
-    });
-}
+Promise.resolve(multiply(6, 7))
+    .then(value => console.log("resolved (function) ->", value));
 
-function logResult(res) {
-    console.log(`Result is ${res}`);
-}
+console.log("A thenable object that resolves to a string")
+let wouldResolve = {
+    then: resolve => {
+        resolve(42);
+        console.log("After resolving wouldResolve.then() but before it crashes");
+        throw new Error("Something went wrong - but after resolving");
+        console.log("You should not see this message");
+    }
+};
 
-function logError(err) {
-    console.log(`Failure: ${err}`);
-}
+Promise.resolve(wouldResolve)
+    .then(res => console.log("wouldResolve ->", res))
+    .catch(err => console.log("You should not see this message", err));
 
-console.log("calling calc, a promise resolved, 4 * 3");
+console.log("A thenable object that throws an Error")
+let wouldFail = {
+    then: resolve => {
+        throw new Error("Something went wrong");
+        console.log("You should not see this message");
+        resolve("resolved");
+    }
+};
 
-calc(4, 3, multiply)
-    .then(logResult)
-    .catch(logError);
-
-console.log("calling calc, promise rejected, 4 * 'hello'");
-
-calc(4, 'hello', multiply)
-    .then(logResult)
-    .catch(logError);
-
-console.log("calling calc, promise rejected, version 2");
-
-calc(4, 'hello', multiply)
-    .then(logResult, logError);
+Promise.resolve(wouldFail)
+    .then(() => console.log("You should not see this message"))
+    .catch(err => console.log("wouldFail ->", err));
