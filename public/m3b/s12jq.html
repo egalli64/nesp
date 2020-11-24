@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AJAX w/ JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <h1>Asynchronous JavaScript And XML w/ JQuery</h1>
+    <p>
+        Back <a href=".">home</a>
+    </p>
+
+    <textarea id="target" rows="20" cols="80"></textarea>
+    <div>
+        <input id="url" value="data/tom.json">
+        <button onclick="getInfo()">Get info</button>
+    </div>
+
+    <script type="text/javascript">
+        function getInfo() {
+            let url = document.getElementById('url').value;
+            let target = document.getElementById('target');
+
+            $.getJSON(url, json => {
+                target.value += json.name + '\n';
+                target.value += json.job.title + '\n';
+                target.value += json.job.languages + '\n';
+            }).fail(
+                jqxhr => {
+                    target.value += "Something bad happened, please check browser log for more details\n";
+                    if (jqxhr.status == 0) {
+                        target.value += "Do you have a CORS problem?\n"
+                    } else if (jqxhr.readyState == 4) {
+                        target.value += "[" + jqxhr.status + "]\n"
+                    }
+                }
+            );
+        }
+    </script>
+</body>
+
+</html>
