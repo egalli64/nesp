@@ -43,7 +43,7 @@ Promise.resolve(goodThenable)
     .then(res => console.log("(3) Thenable fulfilled ->", res))
     .catch(err => console.log("Not used in this example"));
 
-console.log("(4) A rejected thenable")
+console.log("(4) A thenable implicitly rejected for an exception")
 let badThenable = {
     then: resolve => {
         resolve(multiply(3, 'hello'));
@@ -54,3 +54,25 @@ let badThenable = {
 Promise.resolve(badThenable)
     .then(() => console.log("Not used in this example"))
     .catch(err => console.log("(4) Thenable rejected ->", err.message));
+
+console.log("(5) A thenable explicitly rejected generating an exception")
+let rejectedThenable = {
+    then: (resolve, reject) => {
+        reject(new Error("An error occurred in the thenable"));
+    }
+};
+
+Promise.resolve(rejectedThenable)
+    .then(() => console.log("Not used in this example"))
+    .catch(err => console.log("(5) Thenable rejected ->", err.message));
+
+console.log("(5b) A thenable explicitly rejected generating a simple message")
+let rejectedThenableB = {
+    then: (resolve, reject) => {
+        reject("An error occurred in the thenable");
+    }
+};
+
+Promise.resolve(rejectedThenableB)
+    .then(() => console.log("Not used in this example"))
+    .catch(err => console.log("(5b) Thenable rejected ->", err));
