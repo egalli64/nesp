@@ -30,7 +30,6 @@ try {
 Promise.resolve(multiply(6, 7))
     .then(value => console.log("(2b) Function resolved ->", value));
 
-
 //
 console.log("(3) A fulfilled thenable")
 let goodThenable = {
@@ -96,4 +95,4 @@ Promise.resolve(rejectedThenableB)
 console.log("(6) A rejected promise");
 Promise.reject(new Error("Something bad happened"))
     .then(res => console.log("Not used in this example"))
-    .catch(err => console.log("(1) Promise rejected ->", err.message));
+    .catch(err => console.log("(6) Promise rejected ->", err.message));
