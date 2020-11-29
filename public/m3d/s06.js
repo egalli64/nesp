@@ -1,4 +1,4 @@
-// How to create a promise via resolve()
+// Promise resolve() & reject()
 
 console.log("(1) Resolve a value");
 
@@ -7,6 +7,7 @@ let param = 42.42;
 Promise.resolve(param)
     .then(res => console.log("(1) value resolved ->", res));
 
+//
 console.log("(2) Resolve a function returning a value");
 
 function multiply(a, b) {
@@ -29,6 +30,8 @@ try {
 Promise.resolve(multiply(6, 7))
     .then(value => console.log("(2b) Function resolved ->", value));
 
+
+//
 console.log("(3) A fulfilled thenable")
 let goodThenable = {
     then: resolve => {
@@ -43,6 +46,8 @@ Promise.resolve(goodThenable)
     .then(res => console.log("(3) Thenable fulfilled ->", res))
     .catch(err => console.log("Not used in this example"));
 
+
+//
 console.log("(4) A thenable implicitly rejected for an exception")
 let badThenable = {
     then: resolve => {
@@ -55,6 +60,7 @@ Promise.resolve(badThenable)
     .then(() => console.log("Not used in this example"))
     .catch(err => console.log("(4) Thenable rejected ->", err.message));
 
+//
 console.log("(5) A thenable explicitly rejected generating an exception")
 let rejectedThenable = {
     then: (resolve, reject) => {
@@ -70,6 +76,7 @@ Promise.resolve(rejectedThenable)
     .then(() => console.log("Not used in this example"))
     .catch(err => console.log("(5) Thenable rejected ->", err.message));
 
+//
 console.log("(5b) A thenable explicitly rejected generating a simple message - uncommon appraoch")
 let rejectedThenableB = {
     then: (resolve, reject) => {
@@ -84,3 +91,9 @@ let rejectedThenableB = {
 Promise.resolve(rejectedThenableB)
     .then(() => console.log("Not used in this example"))
     .catch(err => console.log("(5b) Thenable rejected ->", err));
+
+//
+console.log("(6) A rejected promise");
+Promise.reject(new Error("Something bad happened"))
+    .then(res => console.log("Not used in this example"))
+    .catch(err => console.log("(1) Promise rejected ->", err.message));
