@@ -3,14 +3,14 @@
  */
 
 document.getElementById('f').onsubmit = () => {
-    console.log('never submit this form!')
+    console.log('never submit this form!');
     return false;
 };
 
 let inputX = document.getElementById('x');
 
 inputX.onfocus = () => {
-    console.log('x on focus')
+    console.log('x on focus');
 };
 
 inputX.onblur = () => {
@@ -23,11 +23,11 @@ inputX.onchange = () => {
 
 let box = document.getElementById('box');
 
-box.onclick = (event) => {
+box.onclick = event => {
     console.log('Click on box', event.screenX, event.screenY);
 };
 
-box.ondblclick = (event) => {
+box.ondblclick = event => {
     console.log('Double click on box', event.screenX, event.screenY);
 };
 
