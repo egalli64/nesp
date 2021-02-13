@@ -4,6 +4,15 @@
 <head>
     <meta charset="utf-8">
     <title>BOM</title>
+    <script type="text/javascript">
+        function checkConfirm() {
+            let target = document.getElementById('target');
+            if (!confirm('confirm?')) {
+                target.value += "not ";
+            }
+            target.value += "confirmed.\n";
+        };
+    </script>
 </head>
 
 <body>
@@ -15,8 +24,8 @@
 
     <textarea id="target" rows="20" cols="80"></textarea>
     <div>
-        <input type="button" value="alert" onclick="alert('alert!');">
-        <input type="button" value="confirm" onclick="checkConfirm();">
+        <input type="button" value="alert" onclick="alert('alert!')">
+        <input type="button" value="confirm" onclick="checkConfirm()">
     </div>
 
     <script type="text/javascript">
@@ -24,13 +33,6 @@
 
         target.value += `window heights: ${window.outerHeight}, ${window.innerHeight}\n`;
         target.value += `window widths: ${window.outerWidth}, ${window.innerWidth}\n`;
-
-        function checkConfirm() {
-            if (!confirm('confirm?')) {
-                target.value += "not ";
-            }
-            target.value += "confirmed.\n";
-        };
     </script>
 </body>
 
