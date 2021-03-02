@@ -1,0 +1,26 @@
+#output {
+    background-color: yellow;
+    padding: 10px;
+    display: flex;
+}
+
+#input {
+    display: flex;
+    background-color: orange;
+    height: 30px;
+}
+
+.bucket {
+    border: 2px solid black;
+    margin: auto;
+    width: 40%;
+    height: 100px;
+    display: flex;
+}
+
+.box {
+    border: 2px solid black;
+    width: 50px;
+    text-align: center;
+    margin: auto;
+}
