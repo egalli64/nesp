@@ -1,21 +1,21 @@
 {
-  "name": "fed",
+  "name": "nesp",
   "version": "1.0.0",
-  "description": "Front End Developer Course",
-  "main": "index.js",
+  "description": "Node Express Static Web Project",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/egalli64/fed.git"
+    "url": "git+https://github.com/egalli64/nesp.git"
   },
   "author": "egalli64@gmail.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/egalli64/fed/issues"
+    "url": "https://github.com/egalli64/nesp/issues"
   },
-  "homepage": "https://github.com/egalli64/fed#readme",
+  "homepage": "https://github.com/egalli64/nesp#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1"
