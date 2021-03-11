@@ -3,37 +3,20 @@
 
 <head>
     <meta charset="utf-8">
-    <title>table</title>
+    <title>Tables</title>
 </head>
 
 <body>
-    <h1>table</h1>
+    <header>
+        <h1>Tables</h1>
+    </header>
+    <nav>
+        Back <a href="..">home</a>
+    </nav>
 
-    <p>
-        Back <a href=".">home</a>
-    </p>
-
-    <h2>A simple one:</h2>
+    <h2>Basics</h2>
     <table>
-        <tr>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-        </tr>
-    </table>
-
-    <h2>Headers:</h2>
-    <table>
+        <caption>Elements table, tr, td, ...</caption>
         <thead>
             <tr>
                 <th scope="row">\</th>
@@ -62,88 +45,91 @@
         </tr>
     </table>
 
-    <h2>Spanning rows/columns:</h2>
-    <h3>Spanning columns</h3>
+    <h2>Spanning on more columns</h2>
     <table>
+        <caption>The colspan attribute</caption>
         <thead>
             <tr>
-                <th>Day\Time</th>
-                <th>9-11</th>
-                <th>11-13</th>
-                <th>14-16</th>
-                <th>16-18</th>
+                <th scope="col">Day\Time</th>
+                <th scope="col">9-11</th>
+                <th scope="col">11-13</th>
+                <th scope="col">14-16</th>
+                <th scope="col">16-18</th>
             </tr>
         </thead>
         <tr>
-            <th>Monday</th>
-            <td colspan="2" align="center">SQL</td>
+            <th scope="row">Monday</th>
+            <td colspan="2">SQL</td>
             <td>Exercise</td>
             <td>JDBC</td>
         </tr>
         <tr>
-            <th>Tuesday</th>
-            <td colspan="3" align="center">HTML</td>
+            <th scope="row">Tuesday</th>
+            <td colspan="3">HTML</td>
             <td>Exercise</td>
         </tr>
     </table>
 
-    <h3>Spanning rows</h3>
+    <h2>Spanning on more rows</h2>
     <table>
+        <caption>The rowspan attribute</caption>
         <thead>
             <tr>
-                <th>Time\Room</th>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
+                <th scope="col">Time\Room</th>
+                <th scope="col">1</th>
+                <th scope="col">2</th>
+                <th scope="col">3</th>
             </tr>
         </thead>
         <tr>
-            <th>9-11</th>
+            <th scope="row">9-11</th>
             <td rowspan="2">Java</td>
             <td>HTML</td>
             <td>SQL</td>
         </tr>
         <tr>
-            <th>11-13</th>
+            <th scope="row">11-13</th>
             <td>Spring</td>
             <td>CSS</td>
         </tr>
     </table>
 
-    <h3>Head, body, foot</h3>
+
+    <h2>The three table sections</h2>
     <table>
+        <caption>Elements thead, tbody, tfoot</caption>
         <thead>
             <tr>
-                <th>Date</th>
-                <th>Input</th>
-                <th>Output</th>
+                <th scope="col">Date</th>
+                <th scope="col">Input</th>
+                <th scope="col">Output</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th>1st January</th>
+                <th scope="row">1st January</th>
                 <td>12</td>
                 <td>42</td>
             </tr>
             <tr>
-                <th>2nd January</th>
+                <th scope="row">2nd January</th>
                 <td>32</td>
                 <td>21</td>
             </tr>
             <tr>
-                <th>...</th>
+                <th scope="row">...</th>
                 <td>...</td>
                 <td>...</td>
             </tr>
             <tr>
-                <th>31st January</th>
+                <th scope="row">31st January</th>
                 <td>80</td>
                 <td>120</td>
             </tr>
         </tbody>
         <tfoot>
             <tr>
-                <td></td>
+                <th scope="row">Total</th>
                 <td>4010</td>
                 <td>8020</td>
             </tr>

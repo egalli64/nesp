@@ -4,6 +4,13 @@
 <head>
     <meta charset="utf-8">
     <title>form</title>
+
+    <style>
+        /* form elements _not_ affected by parent font style */
+        /* input {
+            color: blue;
+        } */
+    </style>
 </head>
 
 <body>
@@ -20,8 +27,7 @@
             <input type="text" id="name" name="sender">
         </div>
         <div>
-            <label for="msg">Message:</label>
-            <textarea id="msg" name="message"></textarea>
+            <label>Message: <textarea name="message"></textarea></label>
         </div>
         <div>
             <input type="submit" value="Send">

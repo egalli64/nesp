@@ -54,3 +54,15 @@ p.myClass {
 #interesting ~ p {
     font-style: italic;
 }
+
+article:hover {
+    background-color: lightgreen;
+}
+
+div span {
+    background-color: yellow;
+}
+
+div>span {
+    text-decoration: underline;
+}
