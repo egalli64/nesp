@@ -3,19 +3,19 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>select option</title>
+	<title>Select-options</title>
 </head>
 
 <body>
-	<h1>select option</h1>
-
-	<p>
-		Back <a href=".">home</a>
-	</p>
+	<header>
+		<h1>Select-options</h1>
+	</header>
+	<nav>
+		Back <a href="..">home</a>
+	</nav>
 
 	<h2>Single choice</h2>
-	<!-- !!! no action specified !!! -->
-	<form>
+	<form action="/test">
 		<div>
 			<select name="os">
 				<option value="none">-</option>
@@ -23,13 +23,12 @@
 				<option value="windows">Windows</option>
 				<option value="macOs">MacOS</option>
 			</select>
-			<input type="submit" value="Enter">
+			<button>Enter</button>
 		</div>
 	</form>
 
 	<h2>Multiple choice</h2>
-	<!-- !!! no action specified !!! -->
-	<form>
+	<form action="/test">
 		<div>
 			<select name="os" multiple>
 				<option value="none">-</option>
@@ -37,7 +36,7 @@
 				<option value="windows">Windows</option>
 				<option value="macOs">MacOS</option>
 			</select>
-			<input type="submit" value="Enter">
+			<button>Enter</button>
 		</div>
 	</form>
 </body>

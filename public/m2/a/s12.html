@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Some input types and text area</title>
+</head>
+
+<body>
+    <header>
+        <h1>Some input types and text area</h1>
+    </header>
+    <nav>
+        Back <a href="..">home</a>
+    </nav>
+
+    <form action="/test" method="POST">
+        <div>
+            <label>An input is text by default <input type="text" name="user" value="Bob"></label>
+        </div>
+        <div>
+            <label>Password are not showed <input type="password" name="pwd" required></label>
+        </div>
+        <div>
+            <input type="hidden" name="invisible" value="notShowed">
+        </div>
+        <div>
+            <label>Date is usally rendered with a popup calendar <input type="date" name="milestone"></label>
+        </div>
+        <div>
+            <label>Peek a value in a range <input type="range" name="size" min="0" max="100"></label>
+        </div>
+        <div>
+            <label>Peek a color <input type="color" name="back"></label>
+        </div>
+        <div>
+            Multiline input with textarea<br>
+            <textarea name="comment">Enter your comment here.</textarea>
+        </div>
+        <div>
+            <button>Enter</button>
+        </div>
+    </form>
+</body>
+
+</html>

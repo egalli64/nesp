@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Attributes for input</title>
+
+    <style>
+        /* form elements _not_ affected by parent font style */
+        body {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Attributes for input</h1>
+    </header>
+    <nav>
+        Back <a href="..">home</a>
+    </nav>
+
+    <form action="/test">
+        <div>
+            <label>"a" with default value <input name="a" value="A"></label>
+        </div>
+        <div>
+            <label>"b" with placeholder <input name="b" placeholder="Put your value here"></label>
+        </div>
+        <div>
+            <label>"c" is autofocused and required <input name="c" required autofocus></label>
+        </div>
+        <div>
+            <label>"d" has size and maxlength <input name="d" size="15" maxlength="30"></label>
+        </div>
+        <div>
+            <label>"e" is disabled <input name="e" disabled value="currently not used"></label>
+        </div>
+        <div>
+            <label>"f" is (like) an italian fiscal code
+                <input name="f" pattern="[A-Z]{6}\d{2}[A-Z]\d{2}[A-Z]\d{3}[A-Z]$">
+            </label>
+        </div>
+        <div>
+            <button>Enter</button>
+        </div>
+    </form>
+</body>
+
+</html>

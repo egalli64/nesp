@@ -3,29 +3,36 @@
 
 <head>
     <meta charset="utf-8">
-    <title>div vs span</title>
+    <title>Buttons</title>
 </head>
 
 <body>
-    <h1>div vs span</h1>
+    <header>
+        <h1>Buttons</h1>
+    </header>
+    <nav>
+        Back <a href="..">home</a>
+    </nav>
 
-    <p>
-        Back <a href=".">home</a>
-    </p>
-
-    <div>
-        <p>This paragraph and the following list are in the same "div" block.</p>
-        <ul>
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
-            <li>Four</li>
-        </ul>
-    </div>
-
-    <p>
-        This is a plain paragraph containing <span>an inline group</span>, known as a "span".
-    </p>
+    <form action="/test">
+        <div>
+            <input name="first" placeholder="First name">
+            <input name="last" placeholder="Last name">
+        </div>
+        <div>
+            <button>Enter</button>
+            <button type="reset">Reset</button>
+            <button type="button">Button</button>
+        </div>
+        <div>
+            <input type="submit" value="Enter">
+            <input type="reset" value="Reset">
+            <input type="button" value="Button">
+        </div>
+        <div>
+            <input type="image" src="img/flower.jpg" width="200" alt="Enter">
+        </div>
+    </form>
 </body>
 
 </html>

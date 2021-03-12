@@ -18,3 +18,7 @@ th {
 td {
     background-color: lightgreen;
 }
+
+tfoot {
+    border: 2px solid darkgreen;
+}
