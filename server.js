@@ -4,18 +4,20 @@ let app = express();
 
 app.use(cors());
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.get('/hello', function (req, res) {
     res.send('{"message": "Hello World!"}');
 });
 
 function controller(req, res) {
-    console.log(req.query);
+    let params = Object.keys(req.body).length ? req.body : req.query;
 
     let result = '<h1>Parameters</h1>\n';
     result += '<ul>\n'
-    for (let item in req.query) {
-        result += `<li>${item}: ${req.query[item]}</li>\n`;
+    for (let item in params) {
+        result += `<li>${item}: ${params[item]}</li>\n`;
     }
     result += '</ul>\n'
 
