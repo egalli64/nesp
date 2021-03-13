@@ -1,0 +1,24 @@
+#grid121 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    border: 2px solid blue;
+    margin: 10px;
+    padding: 10px;
+}
+
+#grid3ColsEqui {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 10px;
+    border: 2px solid blue;
+    margin: 10px;
+    padding: 10px;
+}
+
+.box {
+    border: 2px solid green;
+    padding: 10px;
+    text-align: center;
+}

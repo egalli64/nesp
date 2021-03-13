@@ -3,31 +3,25 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Floating</title>
-    <link rel="stylesheet" type="text/css" href="css/s17.css">
+    <title>Float</title>
+    <link rel="stylesheet" type="text/css" href="css/s05.css">
 </head>
 
 <body>
-    <h1>Floating</h1>
+    <header>
+        <h1>Float</h1>
+    </header>
+    <nav>
+        Back <a href="..">home</a>
+    </nav>
 
-    <p>
-        Back <a href=".">home</a>
-    </p>
-
-    <h2>float</h2>
-
-    <div class="box"></div>
+    <h2>Left/right floating boxes</h2>
+    <div class="boxLeft"></div>
+    <div class="boxRight"></div>
 
     <p class="green">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor,
         eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras
         porttitor imperdiet nunc, at ultricies tellus laoreet sit amet.</p>
-
-    <p class="cleared">Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-        vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
-        convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin
-        eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo
-        et a urna. Ut id ornare felis, eget fermentum sapien.</p>
-
     <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus
         turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur
         eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
@@ -35,10 +29,18 @@
         tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes,
         nascetur ridiculus mus.</p>
 
-    <h2>float in display flow-root</h2>
+    <hr>
+    <h2>Left floating box, following paragraph cleared</h2>
+    <div class="boxLeft"></div>
+
+    <p class="green cleared">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor,
+        eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras
+        porttitor imperdiet nunc, at ultricies tellus laoreet sit amet.</p>
+
+    <h2>A float box in a display flow-root container</h2>
 
     <div id="container">
-        <div class="box"></div>
+        <div class="boxLeft"></div>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia
             lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras
