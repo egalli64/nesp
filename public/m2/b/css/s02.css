@@ -1,3 +1,7 @@
 nav>ul>li {
     display: inline-block;
 }
+
+#hidden {
+    display: none;
+}

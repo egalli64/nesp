@@ -5,16 +5,38 @@ header {
 section {
     display: flex;
     border: 1px solid black;
+    padding: 10px;
+}
+
+div {
+    border: 1px solid black;
+}
+
+.noneFlex {
+    flex: none;
+}
+
+.initialFlex {
+    flex: initial;
+}
+
+.autoFlex {
+    flex: auto;
+}
+
+.oneFlex {
+    flex: 1;
+}
+
+.twoFlex {
+    flex: 2;
 }
 
 article {
+    width: 300px;
     padding: 10px;
     margin: 10px;
     border: 1px solid red;
-}
-
-#container {
-    border: 2px solid black;
 }
 
 .box {
@@ -22,17 +44,11 @@ article {
     width: 100px;
     height: 100px;
     margin: auto;
+    padding: 10px;
 }
 
 #container1 {
     display: flex;
     height: 300px;
     border: 2px solid black;
-}
-
-.box1 {
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
-    margin: auto;
 }
