@@ -1,0 +1,15 @@
+// sass mixin
+
+@mixin my-border($my-color: black) {
+  border: solid 2px $my-color;
+}
+
+nav {
+  background-color: bisque;
+  @include my-border();
+}
+
+#my-sized {
+  background-color: yellowgreen;
+  @include my-border();
+}

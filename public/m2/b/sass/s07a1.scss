@@ -1,0 +1,16 @@
+// sass variables
+
+$dark: darkblue;
+$light: lightyellow;
+$base-size: 14px;
+$larger-size: $base-size + 5;
+
+body {
+  color: $dark;
+  background-color: $light;
+}
+
+#my-sized {
+  font-size: $larger-size
+}
+
