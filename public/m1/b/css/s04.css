@@ -66,3 +66,16 @@ div span {
 div>span {
     text-decoration: underline;
 }
+
+[type=text] {
+    background-color: olive;
+}
+
+[type=number] {
+    background-color: yellow;
+}
+
+input:hover {
+    color: blue;
+    font-weight: bold;
+}
