@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Web Storage API</title>
+    <script type="text/javascript" src="js/s14.js"></script>
 </head>
 
 <body>
@@ -26,55 +27,6 @@
         <br><strong>Message to Bob: </strong><input id="msg" value="hello">
         <button onclick="setMessage()">Set</button>
     </div>
-
-    <script type="text/javascript">
-        const APP_NAME = 'nesp';
-
-        function selectedStorage() {
-            return document.getElementById("local").checked ? localStorage : sessionStorage;
-        }
-
-        function clearStorage() {
-            selectedStorage().clear();
-        }
-
-        function getAllItems() {
-            let storage = selectedStorage();
-            let target = document.getElementById('target');
-            target.value += 'Number of items currently in selected storage: ' + storage.length + '\n';
-            for (let i = 0; i < storage.length; i++) {
-                let key = storage.key(i);
-                target.value += key + ' -> ' + storage.getItem(key) + '\n';
-            }
-        }
-
-        function setItem() {
-            let key = APP_NAME + '.' + document.getElementById('set').value;
-            let value = document.getElementById('value').value;
-            console.log('set', key, value);
-            selectedStorage().setItem(key, value);
-        }
-
-        function removeItem() {
-            let key = APP_NAME + '.' + document.getElementById('del').value;
-            console.log('remove', key);
-            selectedStorage().removeItem(key);
-        }
-        
-        function setMessage() {
-            let key = APP_NAME + '.message';
-            let obj = {
-                recipient: "Bob",
-                msg: document.getElementById('msg').value
-            };
-
-            console.log('set', key, obj);
-            selectedStorage().setItem(key, JSON.stringify({
-                recipient: "Bob",
-                msg: document.getElementById('msg').value
-            }));
-        }
-    </script>
 </body>
 
 </html>
