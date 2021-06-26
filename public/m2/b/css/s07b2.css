@@ -1,0 +1,11 @@
+.my-border {
+  border: solid 2px black;
+}
+nav {
+  background-color: bisque;
+  border: solid 2px black;
+}
+#my-sized {
+  background-color: yellowgreen;
+  border: solid 2px black;
+}
