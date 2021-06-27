@@ -8,6 +8,4 @@ for (let y of ys) {
     console.log(`> ${y}`);
 }
 
-ys.forEach((y) => {
-    console.log(`>> ${y}`);
-});
+ys.forEach(y => console.log(`>> ${y}`));
