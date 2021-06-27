@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Fetch</title>
-    <script type="text/javascript" src="js/s13.js"></script>
+    <script type="text/javascript" src="js/s13.js" defer></script>
 </head>
 
 <body>
@@ -16,7 +16,8 @@
     <textarea id="target" rows="20" cols="80"></textarea>
     <div>
         <input id="url" value="data/tom.json">
-        <button onclick="getInfo()">Fetch</button>
+        <button id="plain">Fetch</button>
+        <button id="async">Fetch async</button>
     </div>
 </body>
 
