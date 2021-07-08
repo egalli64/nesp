@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Web Storage API</title>
-    <script type="text/javascript" src="js/s14.js"></script>
+    <script type="text/javascript" src="js/s14.js" defer></script>
 </head>
 
 <body>
@@ -20,12 +20,16 @@
         <label><input type="radio" id="local" name="storage" checked>Local</label>
         <label><input type="radio" name="storage">Session</label>
 
-        <button onclick="getAllItems()">Get all</button>
-        <button onclick="clearStorage()">Clear</button>
-        <button onclick="setItem()">Set</button><input id="set" value="user"><input id="value" value="bob">
-        <button onclick="removeItem()">Remove</button><input id="del" value="user">
-        <br><strong>Message to Bob: </strong><input id="msg" value="hello">
-        <button onclick="setMessage()">Set</button>
+        <button id="btnAll">Get all</button>
+        <button id="btnClear">Clear</button>
+        <button id="btnSet">Set</button>
+        <input id="set" value="user">
+        <input id="value" value="bob">
+        <button id="btnDel">Remove</button>
+        <input id="del" value="user">
+        <br><strong>Message to Bob: </strong>
+        <input id="msg" value="hello">
+        <button id="btnMsg">Set</button>
     </div>
 </body>
 
