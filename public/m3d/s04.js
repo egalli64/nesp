@@ -32,20 +32,20 @@ function logError(err) {
 // (7 * 5 + 1) / 3
 calc(7, 5, mult,
     res => calc(res, 1, add,
-        res => calc(res, 3, div, logResult, logError),
+        x => calc(x, 3, div, logResult, logError),
         logError),
     logError);
 
 // (7 * 'hello' + 1) / 3
 calc(7, 'hello', mult, res =>
     calc(res, 1, add,
-        res => calc(res, 3, div, logResult, logError),
+        x => calc(x, 3, div, logResult, logError),
         logError),
     logError);
 
 // (7 * 5 + 1) / 'hello'
 calc(7, 5, mult, res =>
     calc(res, 1, add,
-        res => calc(res, 'hello', div, logResult, logError),
+        x => calc(x, 'hello', div, logResult, logError),
         logError),
     logError);
