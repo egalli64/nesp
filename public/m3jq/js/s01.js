@@ -1,3 +1,3 @@
-$("#hello").on('click',  () => {
-    alert("Hello!")
+$('#hello').on('click', () => {
+    alert('Hello!');
 });

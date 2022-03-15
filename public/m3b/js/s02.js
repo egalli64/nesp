@@ -1,4 +1,4 @@
-/**
+/*
  * Assuming
  *  DOM already loaded
  *  target is an element with a textual content
