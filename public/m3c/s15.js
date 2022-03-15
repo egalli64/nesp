@@ -7,6 +7,8 @@ function makeMultiplier(factor) {
 }
 
 let tenfold = makeMultiplier(10);
+let double = makeMultiplier(2);
 
 let value = 42;
-console.log(42, tenfold(42));
+console.log(value, tenfold(value));
+console.log(value, double(value));
