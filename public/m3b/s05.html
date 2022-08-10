@@ -9,25 +9,30 @@
 <body>
     <h1>DOM Node</h1>
 
-    <p>
+    <nav>
         Back <a href=".">home</a>
-    </p>
+    </nav>
 
     <div>
         <input type="number" id="counter" value="1">
         <button id="go">Go</button>
     </div>
-    <ul id="target"></ul>
+    <ol id="target"></ol>
 
     <script type="text/javascript">
         let target = document.getElementById('target');
 
         let go = document.getElementById('go');
         go.onclick = function () {
+            // firstly, clean the target up
+            // version 1 - simpler
             target.innerHTML = '';
-/*            while (target.firstChild) {
+
+            // version 2 - imperative
+            /*
+            while (target.firstChild) {
                 target.removeChild(target.firstChild);
-            }*/
+            } */
 
             let counter = document.getElementById('counter').value;
 
