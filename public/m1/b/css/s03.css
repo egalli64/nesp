@@ -1,8 +1,8 @@
-/* a comment */
-@import url(https://fonts.googleapis.com/css2?family=Dancing+Script);
+/* uncomment next line to import external font */
+/* @import url(https://fonts.googleapis.com/css2?family=Dancing+Script); */
 
 body {
-    font-family: 'Dancing Script';
+    /* font-family: 'Dancing Script'; */
     font-style: italic;
 }
 
