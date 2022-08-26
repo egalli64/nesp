@@ -7,7 +7,9 @@ div {
     margin-bottom: 30px;
     border-width: 5px;
     border-style: solid;
-    padding-left: 10px;
     padding-top: 30px;
-    background-color: aqua;
+    padding-bottom: 30px;
+    background-color: blue;
+    width: 50vw;
+    text-align: center;
 }
