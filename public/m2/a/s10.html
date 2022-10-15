@@ -3,29 +3,48 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Fieldset and labels</title>
+    <title>Attributes for input</title>
+
+    <style>
+        /* form elements _not_ affected by parent font style */
+        body {
+            color: blue;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <h1>Fieldset and labels</h1>
+        <h1>Attributes for input</h1>
     </header>
-    <nav>
-        Back <a href="..">home</a>
-    </nav>
 
-    <form action="/test" method="GET">
+    <form action="/test">
         <div>
-            <fieldset>
-                <legend>User</legend>
-                <label for="fn">First name</label>
-                <input id="fn" name="first">
-                <label>Last name <input type="text" name="last"></label>
-            </fieldset>
+            <input name="a" value="A"> <span>"a" has an initial value</span>
+        </div>
+        <div>
+            <input name="b" placeholder="Put your value here"> <span>"b" has a placeholder</span>
+        </div>
+        <div>
+            <input name="c" required autofocus> <span>"c" is autofocused and required</span>
+        </div>
+        <div>
+            <input name="d" size="15" maxlength="30"> <span>"d" has a given size and maxlength</span>
+        </div>
+        <div>
+            <input name="e" disabled value="currently not used"> <span>"e" is disabled</span>
+        </div>
+        <div>
+            <input name="f" pattern="[A-Z]{6}\d{2}[A-Z]\d{2}[A-Z]\d{3}[A-Z]$"> <span>"f" should be (like) an italian fiscal code</span>
         </div>
         <div>
             <button>Enter</button>
         </div>
     </form>
+
+    <nav>
+        Back <a href="..">home</a>
+    </nav>
+</body>
 
 </html>

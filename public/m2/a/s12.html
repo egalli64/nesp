@@ -3,44 +3,38 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Some input types and text area</title>
+    <title>Radio buttons</title>
 </head>
 
 <body>
     <header>
-        <h1>Some input types and text area</h1>
+        <h1>Radio buttons</h1>
     </header>
-    <nav>
-        Back <a href="..">home</a>
-    </nav>
-
-    <form action="/test" method="POST">
+    <form action="/test">
         <div>
-            <label>An input is text by default <input type="text" name="user" value="Bob"></label>
-        </div>
-        <div>
-            <label>Password are not showed <input type="password" name="pwd" required></label>
-        </div>
-        <div>
-            <input type="hidden" name="invisible" value="notShowed">
-        </div>
-        <div>
-            <label>Date is usally rendered with a popup calendar <input type="date" name="milestone"></label>
-        </div>
-        <div>
-            <label>Peek a value in a range <input type="range" name="size" min="0" max="100"></label>
-        </div>
-        <div>
-            <label>Peek a color <input type="color" name="back"></label>
-        </div>
-        <div>
-            Multiline input with textarea<br>
-            <textarea name="comment" cols="30" rows="10" placeholder="Enter your comment here"></textarea>
+            <div><label><input type="radio" name="fav" value="Java">Java</label></div>
+            <div><label><input type="radio" name="fav" value="Python" checked>Python</label></div>
+            <div><label><input type="radio" name="fav" value="Cpp">C++</label></div>
         </div>
         <div>
             <button>Enter</button>
         </div>
     </form>
+
+    <form action="/test">
+        <div>
+            <div><label for="lin">Linux</label> <input id="lin" type="radio" name="fav" value="Linux" checked></div>
+            <div><label for="win">Windows</label><input id="win" type="radio" name="fav" value="Windows"></div>
+            <div><label for="mac">MacOs</label><input id="mac" type="radio" name="fav" value="Mac"></div>
+        </div>
+        <div>
+            <button>Enter</button>
+        </div>
+    </form>
+
+    <nav>
+        Back <a href="..">home</a>
+    </nav>
 </body>
 
 </html>

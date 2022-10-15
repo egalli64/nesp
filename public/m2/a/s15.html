@@ -2,43 +2,37 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<title>Select-options</title>
+    <meta charset="utf-8">
+    <title>Buttons</title>
 </head>
 
 <body>
-	<header>
-		<h1>Select-options</h1>
-	</header>
-	<nav>
-		Back <a href="..">home</a>
-	</nav>
+    <header>
+        <h1>Buttons</h1>
+    </header>
+    <nav>
+        Back <a href="..">home</a>
+    </nav>
 
-	<h2>Single choice</h2>
-	<form action="/test">
-		<div>
-			<select name="os">
-				<option value="none">-</option>
-				<option value="linux" selected>Linux</option>
-				<option value="windows">Windows</option>
-				<option value="macOs">MacOS</option>
-			</select>
-			<button>Enter</button>
-		</div>
-	</form>
-
-	<h2>Multiple choice</h2>
-	<form action="/test">
-		<div>
-			<select name="os" multiple>
-				<option value="none">-</option>
-				<option value="linux" selected>Linux</option>
-				<option value="windows">Windows</option>
-				<option value="macOs">MacOS</option>
-			</select>
-			<button>Enter</button>
-		</div>
-	</form>
+    <form action="/test">
+        <div>
+            <input name="first" placeholder="First name">
+            <input name="last" placeholder="Last name">
+        </div>
+        <div>
+            <button>Enter</button>
+            <button type="reset">Reset</button>
+            <button type="button">Button</button>
+        </div>
+        <div>
+            <input type="submit" value="Enter">
+            <input type="reset" value="Reset">
+            <input type="button" value="Button">
+        </div>
+        <div>
+            <input type="image" src="img/flower.jpg" width="200" alt="Enter">
+        </div>
+    </form>
 </body>
 
 </html>

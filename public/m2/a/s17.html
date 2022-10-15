@@ -3,28 +3,29 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Audio & video</title>
+    <title>Canvas & SVG</title>
+    <link rel="stylesheet" type="text/css" href="css/s18.css">
 </head>
 
 <body>
     <header>
-        <h1>Audio &amp; video</h1>
+        <h1>Canvas &amp; SVG</h1>
     </header>
     <nav>
         Back <a href="..">home</a>
     </nav>
 
-    <h2>The mighty Mozilla T-Rex growling</h2>
-    <audio controls>
-        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="audio/mpeg">
-        <p>Go to <a href="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3">the mp3</a></p>
-    </audio>
+    <h2>An empty canvas</h2>
+    <canvas class="bordered" width="300" height="300">
+        Just an empty box
+    </canvas>
 
-    <h2>A Mozilla fast growing flower</h2>
-    <video controls>
-        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="audio/mpeg">
-        <p>Go to <a href="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm">the file</a></p>
-    </video>
+    <h2>A simple svg</h2>
+    <svg class="bordered" viewBox="0 0 300 100" stroke="red" fill="grey">
+        <circle cx="50" cy="50" r="40" />
+        <circle cx="150" cy="50" r="4" />
+        <circle cx="250" cy="50" r="40" />
+    </svg>
 </body>
 
 </html>
