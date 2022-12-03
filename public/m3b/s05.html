@@ -17,31 +17,36 @@
         <input type="number" id="counter" value="1">
         <button id="go">Go</button>
     </div>
-    <ol id="target"></ol>
+    <ul id="target"></ul>
 
     <script type="text/javascript">
-        let target = document.getElementById('target');
+        let target = document.getElementById('target')
 
-        let go = document.getElementById('go');
+        let go = document.getElementById('go')
         go.onclick = function () {
             // firstly, clean the target up
-            // version 1 - simpler
-            target.innerHTML = '';
+            // version 1
+            // target.innerHTML = ''
 
             // version 2 - imperative
-            /*
             while (target.firstChild) {
-                target.removeChild(target.firstChild);
-            } */
+                target.removeChild(target.firstChild)
+            }
 
-            let counter = document.getElementById('counter').value;
+            let counter = document.getElementById('counter').value
+            // TODO: improve input validation
+            counter = counter > 20 ? 20 : counter
 
             for (let i = 0; i < counter; i++) {
-                let node = document.createElement("li");
-                node.appendChild(document.createTextNode(i + 1));
-                target.appendChild(node);
+                // version 1
+                // target.innerHTML += `<li>${i + 1}</li>`
+
+                // version 2
+                    let node = document.createElement("li")
+                    node.appendChild(document.createTextNode(i + 1))
+                    target.appendChild(node)
             }
-        };
+        }
     </script>
 </body>
 
