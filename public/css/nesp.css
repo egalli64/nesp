@@ -1,0 +1,16 @@
+h1 {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    margin: 2vw;
+}
+
+section {
+    flex: auto;
+}
+
+nav>ul>li {
+    display: inline-block;
+}
