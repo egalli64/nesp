@@ -5,47 +5,49 @@
     <meta charset="utf-8">
     <title>Events &amp; attributes</title>
 
+    <link rel="stylesheet" href="css/s08.css">
+
     <!-- should run _before_ loading the DOM -->
+    <!-- document load events -->
     <script type="text/javascript" src="js/s08a.js">
     </script>
 
     <!-- should run _after_ loading the DOM -->
+    <!-- Bind to f, x, clickable, and resizable elements -->
     <script type="text/javascript" src="js/s08b.js" defer>
     </script>
 
     <!-- could run before _or_ after loading the DOM -->
+    <!-- for button click -->
     <script type="text/javascript" src="js/s08c.js" async>
     </script>
-
-    <style type="text/css">
-        #box {
-            width: 100px;
-            height: 100px;
-            background-color: lightblue;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-    </style>
 </head>
 
 <body>
     <h1>Events &amp; attributes</h1>
 
-    <p>
+    <nav>
         Back <a href=".">home</a>
-    </p>
+    </nav>
 
-    <!-- !!! no action !!! -->
+    <!-- !!! no action, but submit is disabled (see b script) !!! -->
     <form id="f">
+        <!-- log on focus, blur, change events -->
         <input id="x">
         <button>OK</button>
     </form>
 
-    <div id="box"></div>
+    <!-- log on click, dblclick, mouseover, mouseout (see b script) -->
+    <div id="clickable" class="box"></div>
 
     <div>
+        <!-- both change body background color -->
         <button onclick="changeBackColor()">Click me</button>
+        <button onclick="changeBackColorFull()">... or me</button>
     </div>
+
+    <!-- change size on mouseover, reset it on mouseout (see b script)-->
+    <div id="resizable" class="box"></div>
 </body>
 
 </html>

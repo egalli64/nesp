@@ -1,5 +1,5 @@
 /**
- * Bind to elements -> they should be in the DOM!
+ * Bind to f, x, clickable, and resizable elements -> they should be in the DOM!
  */
 
 document.getElementById('f').addEventListener('submit', event => {
@@ -7,15 +7,28 @@ document.getElementById('f').addEventListener('submit', event => {
     event.preventDefault();
 });
 
-let inputX = document.getElementById('x');
+let x = document.getElementById('x');
 
-inputX.addEventListener('focus', () => console.log('x on focus'));
-inputX.addEventListener('blur', () => console.log('x blurred'));
-inputX.addEventListener('change', () => console.log('x changed'));
+x.addEventListener('focus', () => console.log('x on focus'));
+x.addEventListener('blur', () => console.log('x blurred'));
+x.addEventListener('change', () => console.log('x changed'));
 
-let box = document.getElementById('box');
+let clickable = document.getElementById('clickable');
 
-box.addEventListener('click', event => console.log('Click on box', event.screenX, event.screenY));
-box.addEventListener('dblclick', event => console.log('Double click on box', event.screenX, event.screenY));
-box.addEventListener('mouseover', event => console.log('Mouse over the box', event.screenX, event.screenY));
-box.addEventListener('mouseout', event => console.log('Mouse out of the box', event.screenX, event.screenY));
+clickable.addEventListener('click', event => console.log('Click on clickable box', event.screenX, event.screenY));
+clickable.addEventListener('dblclick', event => console.log('Double click on clickable box', event.screenX, event.screenY));
+clickable.addEventListener('mouseover', event => console.log('Mouse over the clickable box', event.screenX, event.screenY));
+clickable.addEventListener('mouseout', event => console.log('Mouse out of the clickable box', event.screenX, event.screenY));
+
+let resizable = document.getElementById('resizable');
+let baseWidth = resizable.offsetWidth;
+let baseHeight = resizable.offsetHeight;
+
+resizable.addEventListener('mouseover', () => {
+    resizable.style.width = (baseWidth * 2) + 'px';
+    resizable.style.height = (baseHeight * 2) + 'px';
+});
+resizable.addEventListener('mouseout', () => {
+    resizable.style.width = baseWidth + 'px';
+    resizable.style.height = baseHeight + 'px';
+});

@@ -6,12 +6,12 @@ function random(choice) {
     return Math.trunc(Math.random() * choice);
 }
 
-let changeBackColorAmongThree = () => {
-    let colors = ['red', 'green', 'blue'];
+let changeBackColor = () => {
+    let colors = ['white', 'red', 'green', 'blue', 'yellow'];
     document.getElementsByTagName('body')[0].style.backgroundColor = colors[random(colors.length)];
 };
 
-let changeBackColor = () => {
-    let color = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
-    document.getElementsByTagName('body')[0].style.backgroundColor = color;
+let changeBackColorFull = () => {
+    let color = 'rgb(' + random(256) + ',' + random(256) + ',' + random(256) + ')';
+    document.querySelector('body').style.backgroundColor = color;
 };
