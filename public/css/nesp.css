@@ -1,4 +1,9 @@
-h1 {
+body {
+    background-color: #fafaee;
+}
+
+h1, h2 {
+    background-color: lightgoldenrodyellow;
     text-align: center;
 }
 
@@ -9,6 +14,10 @@ main {
 
 section {
     flex: auto;
+}
+
+nav {
+    background-color: lightgoldenrodyellow;
 }
 
 nav>ul>li {
