@@ -3,74 +3,46 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Selectors</title>
-    <link rel="stylesheet" type="text/css" href="css/s04.css">
+    <title>A few selectors</title>
+    <link rel="stylesheet" href="css/s04.css">
 </head>
+
+<!-- The tag name "body" is used as a selector in a rule -->
 
 <body>
     <header>
-        <h1>Selectors</h1>
+        <h1>A few selectors</h1>
     </header>
     <nav>
-        Back <a href="..">home</a>
+        <a href="../index.html">Home</a>
     </nav>
 
+    <!-- The tag name "p" is used as a selector in a rule -->
+    <p>In the linked CSS there is a rule to style paragraphs</p>
+    <p class="interesting">There is a rule to style elements of "interesting" class</p>
+    <p id="danger">There is a rule for "danger" id</p>
+
+    <!-- only "em" in "p" are styled in a specific way -->
+    <h2>There is no rule to style an <em>emphasis</em> in a h2</h2>
+    <p>There is a rule to style an <em>emphasis</em> in a p</p>
+    <p>Same rule as above apply for a <strong>strong <em>emphasis</em></strong> in a paragraph</p>
+
+    <!-- only "i" directly in "p" are styled in a specific way -->
+    <h2>There is no rule to style an <i>italic</i> in a h2</h2>
+    <p>There is a rule to style an <i>italic</i> in a paragraph</p>
+    <p>There is a rule to style a <bold>bold <i>italic</i></bold> in a paragraph</p>
+
+    <!-- any element "h3" OR "h4" OR "h5" is styled following the same rule -->
     <h1>Hello</h1>
     <h2>Hello</h2>
-    <h3>Hello</h3>
-    <h4>Hello</h4>
-    <h5>Hello</h5>
+    <h3>Hello - H3</h3>
+    <h4>Hello - H4</h4>
+    <h5>Hello - H5</h5>
     <h6>Hello</h6>
 
-    <p>A plain paragraph.</p>
-    <p id="paragraphId">This is a paragraph with its own unique id.</p>
-    <p class="myClass">A paragraph that is of a given class.</p>
-    <p>Another plain paragraph.</p>
-    <p class="myClass">Another paragraph that is of the same class of the one above.</p>
-
-    <div id="blockId">
-        <p>This paragraph and the following one are in the same "div".</p>
-        <p><span>One</span> <span>Two</span> <span class="myClass">Three</span> <span>Four</span></p>
-    </div>
-
-    <p>
-        A plain paragraph with
-        <span id="special">a span</span>
-        with an id.
-    </p>
-
-    <hr>
-
-    <p>
-        Playing
-        <span class="boldCls">with</span>
-        <span class="upperCls">text</span>
-        <span class="itaCls">properties</span>
-    </p>
-
-    <article id="bordered">
-        <p id="interesting">Some interesting stuff</p>
-        <p>The next sibling of "interesting" (+)</p>
-        <p>A sibling of "interesting" (~)</p>
-    </article>
-
-    <div>
-        <span>A</span>
-        <span>B</span>
-        <p>
-            <span>C</span>
-            <span>D</span>
-        </p>
-    </div>
-    <p>
-        <span>E</span>
-        <span>F</span>
-    </p>
-
-    <div>
-        <input type="text" value="A text input"> <input type="number" value="42">
-    </div>
-
+    <!-- only the elements "p" with class "special" are styled following a rule -->
+    <p class="special">There is a rule just for paragraphs of class "special"</p>
+    <h2 class="special">There is no rule for non-paragraph of class "special"</h2>
 </body>
 
 </html>

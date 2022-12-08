@@ -1,82 +1,40 @@
+/* rule for the "body" element */
 body {
     background-color: gray;
 }
 
+/* rule for the "p" elements */
 p {
-    font-family: fantasy;
+    font-family: cursive;
 }
 
-#special {
-    color: violet;
-}
-
-h1, h2, h3 {
-    color: yellow;
-}
-
-.myClass {
+/* rule for classified elements */
+.interesting {
     font-style: italic;
 }
 
-p.myClass {
-    color: blue;
-}
-
-#paragraphId {
+/* rule for identified element */
+#danger {
     color: red;
+    background-color: yellowgreen;
 }
 
-#blockId {
-    border: 3px solid #ff8000;
-    background-color: #ffff80;
+/* rule for any "em" in a "p" - directly or indirectly */
+p em {
+    color: lightblue;
 }
 
-.boldCls {
-    font-weight: bold;
+/* rule for any "em" in a "p" - only directly */
+p>i {
     color: darkblue;
 }
 
-.itaCls {
-    font-style: italic;
+/* rule for the elements selected by any given selector (OR) */
+h3, h4, h5 {
+    color: yellow;
 }
 
-.upperCls {
-    text-transform: uppercase;
-}
-
-#bordered {
-    border: black ridge;
-}
-
-#interesting + p {
+/* rule for the elements selected by the given selector conjunction (AND) */
+p.special {
     color: blue;
-}
-
-#interesting ~ p {
-    font-style: italic;
-}
-
-article:hover {
-    background-color: lightgreen;
-}
-
-div span {
-    background-color: yellow;
-}
-
-div>span {
-    text-decoration: underline;
-}
-
-[type=text] {
-    background-color: olive;
-}
-
-[type=number] {
-    background-color: yellow;
-}
-
-input:hover {
-    color: blue;
-    font-weight: bold;
 }

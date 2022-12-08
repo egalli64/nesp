@@ -1,0 +1,44 @@
+body {
+    /* background: slateblue; */
+    background-color: slategray;
+}
+
+h1 {
+    color: blue;
+}
+
+#fSize {
+    font-size: 20px;
+}
+
+#fFamily {
+    font-family: sans-serif;
+}
+
+#fStyle {
+    font-style: italic;
+}
+
+#fWeight {
+    font-weight: 900;
+}
+
+#fFont {
+    font: italic 900 20px sans-serif;
+}
+
+#taLeft {
+    text-align: left;
+}
+
+#taCenter {
+    text-align: center;
+}
+
+#taRight {
+    text-align: right;
+}
+
+#taJustify {
+    text-align: justify;
+}

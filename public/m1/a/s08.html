@@ -3,60 +3,23 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Page structure</title>
+    <title>Id and class attributes</title>
+    <!-- spoiler: link element is for letting the browser how to style the current page -->
+    <link rel="stylesheet" href="css/s08.css">
 </head>
 
 <body>
     <header>
-        <h1>Page structure</h1>
+        <h1>Id and class attributes</h1>
     </header>
     <nav>
-        Back <a href="..">home</a>
+        <a href="../index.html">Home</a>
     </nav>
 
-    <main>
-        <p>The main part of this page</p>
-        <div>A generic block with <span>a generic inline</span> in it</div>
-
-        <article>
-            <p>An article</p>
-            <p>blah, blah, blah ...</p>
-
-            <section>
-                <p>Section 1</p>
-                <p>blah, blah, blah ...</p>
-            </section>
-
-            <section>
-                <p>Section 2</p>
-                <p>blah, blah, blah ...</p>
-            </section>
-        </article>
-
-        <article>
-            <p>Another article</p>
-            <p>blah, blah, blah ...</p>
-
-            <section>
-                <p>Section 1</p>
-                <p>blah, blah, blah ...</p>
-            </section>
-
-            <section>
-                <p>Section 2</p>
-                <p>blah, blah, blah ...</p>
-            </section>
-
-            <aside>
-                <p>An aside</p>
-                <p>blah, blah, blah ...</p>
-            </aside>
-        </article>
-
-        <footer>
-            <p>The footer</p>
-        </footer>
-    </main>
+    <p id="important">This is a paragraph identified as important</p>
+    <p>This paragraph is a <em class="remarkable">normal</em> paragraph with an em classified as remarkable</p>
+    <p>This paragraph is a plain paragraph</p>
+    <p class="remarkable">This is a paragraph classified as remarkable</p>
 </body>
 
 </html>

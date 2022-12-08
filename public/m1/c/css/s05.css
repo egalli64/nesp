@@ -1,15 +1,24 @@
-div {
+h1 {
+    text-align: center;
+}
+
+#bag {
     background-color: lightskyblue;
+    border: solid;
 }
 
 #hello {
-    margin-top: 10px;
-    margin-bottom: 30px;
+    margin: 30px;
     border-width: 5px;
     border-style: solid;
+    border-color: blue;
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: blue;
+    background-color: lightblue;
     width: 50vw;
     text-align: center;
+}
+
+.other {
+    background-color: aqua;
 }

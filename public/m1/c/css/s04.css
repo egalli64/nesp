@@ -2,20 +2,20 @@
     font-size: 20px;
 }
 
-.my30px {
-    font-size: 30px;
+.my40px {
+    font-size: 40px;
 }
 
 .my05em {
     font-size: 0.5em;
 }
 
-.my50pc {
-    font-size: 50%;
+.my2rem {
+    font-size: 2rem;
 }
 
-.my05rem {
-    font-size: 0.5rem;
+.my50pc {
+    font-size: 50%;
 }
 
 .my10vh {

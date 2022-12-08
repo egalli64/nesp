@@ -1,6 +1,6 @@
 p {
     margin-left: 15px;
-    color: green;
+    color: green /*!important*/;
 }
 
 .red {

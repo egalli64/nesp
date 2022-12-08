@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Selectors</title>
+    <link rel="stylesheet" type="text/css" href="css/s06.css">
+</head>
+
+<body>
+    <header>
+        <h1>Selectors</h1>
+    </header>
+    <nav>
+        <a href="../index.html">Home</a>
+    </nav>
+
+    <p>Selection by attribute (and hover on paragraphs)</p>
+    <p title="hi">A paragraph titled "hi"</p>
+    <p title="hello">A paragraph titled "hello"</p>
+
+    <div id="pseudoCl">
+        <p>Selection by pseudo class (and hover on paragraphs) - first</p>
+        <p>A paragraph</p>
+        <p>Third paragraph</p>
+        <p>A paragraph</p>
+        <p>Last paragraph</p>
+    </div>
+
+    <p id="pseudoEl">
+        A paragraph styled by pseudo elements (and hover on paragraphs).
+        The first line is styled as all capitalized.
+        The first letter is styled as 2rem.
+    </p>
+
+    <div id="combinators">
+        <p>Selection by combinators + and ~ (and hover on paragraphs)</p>
+        <p id="x">This paragraph has an id, but it is not styled in a specific way</p>
+        <p>The next sibling of "x" (affected by + and ~)</p>
+        <p>A sibling of "x" (affected by ~)</p>
+    </div>
+</body>
+
+</html>

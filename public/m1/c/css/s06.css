@@ -1,0 +1,56 @@
+h1 {
+    text-align: center;
+}
+
+[title] {
+    color: red;
+}
+
+[title="hi"] {
+    background-color: aqua;
+}
+
+p:hover {
+    color: blue;
+    font-weight: bold;
+}
+
+#pseudoCl {
+    background-color: beige;
+}
+
+#pseudoCl>:first-child {
+    color: green;
+}
+
+#pseudoCl>:nth-child(3) {
+    color: chartreuse;
+}
+
+#pseudoCl>:last-child {
+    color: lightgreen;
+}
+
+#pseudoEl {
+    background-color: rgb(236, 236, 214);
+}
+
+#pseudoEl::first-line {
+    text-transform: uppercase;
+}
+
+#pseudoEl::first-letter {
+    font-size: 2rem;
+}
+
+#combinators {
+    background-color: rgb(230, 230, 199);
+}
+
+#x+p {
+    font-size: 1.5rem;
+}
+
+#x~p {
+    background-color: yellow;
+}

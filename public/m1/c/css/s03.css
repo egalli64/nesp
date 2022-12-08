@@ -1,0 +1,43 @@
+body {
+    background-color: aqua;
+}
+
+header {
+    background-color: lightblue;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav {
+    background-color: whitesmoke;
+}
+
+main {
+    background-color: aquamarine;
+}
+
+p {
+    font-style: italic;
+}
+
+div {
+    background-color: green;
+}
+
+span {
+    background-color: lightgreen;
+}
+
+article {
+    background-color: darkcyan;
+}
+
+section {
+    background-color: lightblue;
+}
+
+footer {
+    background-color: coral;
+}
