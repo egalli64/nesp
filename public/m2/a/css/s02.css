@@ -1,13 +1,17 @@
+h1 {
+    text-align: center;
+}
+
+.lowerRoman {
+    list-style-type: lower-roman;
+}
+
 #liDecimal {
     list-style-type: decimal;
 }
 
 #liDecimalZero {
     list-style-type: decimal-leading-zero;
-}
-
-#liLowerRoman {
-    list-style-type: lower-roman;
 }
 
 #liLowerAlpha {
