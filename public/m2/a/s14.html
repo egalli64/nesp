@@ -2,43 +2,44 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<title>Select-options</title>
+    <meta charset="utf-8">
+    <title>Select-options</title>
+    <link rel="stylesheet" href="css/form.css">
 </head>
 
 <body>
-	<header>
-		<h1>Select-options</h1>
-	</header>
-	<nav>
-		Back <a href="..">home</a>
-	</nav>
+    <header>
+        <h1>Select-options</h1>
+    </header>
+    <nav>
+        <a href="../index.html">Home</a>
+    </nav>
 
-	<h2>Single choice</h2>
-	<form action="/test">
-		<div>
-			<select name="os">
-				<option value="none">-</option>
-				<option value="linux" selected>Linux</option>
-				<option value="windows">Windows</option>
-				<option value="macOs">MacOS</option>
-			</select>
-			<button>Enter</button>
-		</div>
-	</form>
+    <h2>Single choice</h2>
+    <form action="/test">
+        <div>
+            <select name="os">
+                <option value="none">-</option>
+                <option value="linux" selected>Linux</option>
+                <option value="windows">Windows</option>
+                <option value="macOs">MacOS</option>
+            </select>
+            <button>Enter</button>
+        </div>
+    </form>
 
-	<h2>Multiple choice</h2>
-	<form action="/test">
-		<div>
-			<select name="os" multiple>
-				<option value="none">-</option>
-				<option value="linux" selected>Linux</option>
-				<option value="windows">Windows</option>
-				<option value="macOs">MacOS</option>
-			</select>
-			<button>Enter</button>
-		</div>
-	</form>
+    <h2>Multiple choice</h2>
+    <form action="/test">
+        <div>
+            <select name="os" multiple>
+                <option value="none">-</option>
+                <option value="linux" selected>Linux</option>
+                <option value="windows">Windows</option>
+                <option value="macOs">MacOS</option>
+            </select>
+            <button>Enter</button>
+        </div>
+    </form>
 </body>
 
 </html>

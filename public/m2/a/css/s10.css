@@ -1,0 +1,4 @@
+/* form elements are _not_ affected by parent font style */
+body {
+    color: blue;
+}

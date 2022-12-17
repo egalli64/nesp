@@ -4,16 +4,23 @@
 <head>
     <meta charset="utf-8">
     <title>Some input types and text area</title>
+    <link rel="stylesheet" href="css/form.css">
 </head>
 
 <body>
     <header>
         <h1>Some input types and text area</h1>
     </header>
+    <nav>
+        <a href="../index.html">Home</a>
+    </nav>
 
     <form action="/test" method="POST">
         <div>
             <input type="text" name="user" value="Bob"> <span>an explicit text input</span>
+        </div>
+        <div>
+            <input type="number" name="age" value="42"> <span>a number</span>
         </div>
         <div>
             <input type="password" name="pwd" required> <span>input "password" is hidden</span>
@@ -38,10 +45,6 @@
             <button>Enter</button>
         </div>
     </form>
-
-    <nav>
-        Back <a href="..">home</a>
-    </nav>
 </body>
 
 </html>
