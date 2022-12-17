@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Images</title>
+    <link rel="stylesheet" href="css/s03.css">
 </head>
 
 <body>
@@ -11,35 +12,42 @@
         <h1>Images</h1>
     </header>
     <nav>
-        Back <a href="..">home</a>
+        <a href="../index.html">Home</a>
     </nav>
 
-    <h1>Images</h1>
-
+    <h2>A (too big!) full size local image</h2>
     <figure>
         <img src="img/flower.jpg" alt="a flower">
     </figure>
 
+    <h2>A (smallish) full size remote image</h2>
     <figure>
         <img src="https://blog.mozilla.org/design/files/2019/10/firefox-master-lockup-vertical.svg" alt="mozilla logo">
     </figure>
 
+    <h2>An intentionally missing image</h2>
     <figure>
-        <img src="img/noFlower.jpg" alt="a flower - intentionally missing">
+        <img src="img/noFlower.jpg" alt="a flower">
     </figure>
 
+    <h2>A fixed size image with a title</h2>
     <figure>
-        <img src="img/flower.jpg" title="Fixed size" width="150px" height="150px" alt="a flower">
+        <img src="img/flower.jpg" title="Squared flower img" width="150px" height="150px" alt="a flower">
     </figure>
 
+    <h2>A 50% image (container relative, calculated height)</h2>
     <figure>
-        <img src="img/flower.jpg" title="Half size" width="50%" alt="a flower">
+        <img src="img/flower.jpg" width="50%" alt="a flower">
     </figure>
 
+    <h2>A fixed size image with a caption (fixed, calculated height)</h2>
     <figure>
         <img src="img/flower.jpg" width="200px" alt="a flower">
         <figcaption>This is just a flower.</figcaption>
     </figure>
+
+    <h2>A slice of an image (styled by background image)</h2>
+    <div id="imgSlice"></div>
 </body>
 
 </html>

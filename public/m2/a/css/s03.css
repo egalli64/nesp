@@ -1,0 +1,15 @@
+h1 {
+    text-align: center;
+}
+
+#imgSlice {
+    width: 95vw;
+    height: 30vh;
+    margin: 10px;
+    border-style: solid;
+    background-image: url('/m2/a/img/flower.jpg');
+}
+
+figure {
+    background-color: bisque;
+}
