@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Flexbox</title>
-    <link rel="stylesheet" type="text/css" href="css/s03.css">
+    <link rel="stylesheet" href="css/s03.css">
 </head>
 
 <body>
@@ -12,12 +12,13 @@
         <h1>Flexbox</h1>
     </header>
     <nav>
-        Back <a href="..">home</a>
+        <a href="../index.html">Home</a>
     </nav>
 
-    <h2>Unflexible container and content</h2>
-    <div>
-        <article>
+    <h2>Flexible container (display: flex)</h2>
+    <h3>Only grows are set (flex-grow: 0 / 1 / 2)</h3>
+    <section class="flexContainer">
+        <article class="flexGrow0">
             <h3>First article</h3>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -27,7 +28,7 @@
                 non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </article>
 
-        <article>
+        <article class="flexGrow1">
             <h3>Second article</h3>
 
             <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et
@@ -42,7 +43,7 @@
                 molestie eu, feugiat in, orci. In hac habitasse platea dictumst.</p>
         </article>
 
-        <article>
+        <article class="flexGrow2">
             <h3>Third article</h3>
 
             <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et
@@ -50,10 +51,47 @@
                 in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis
                 risus a elit. Etiam tempor.</p>
         </article>
-    </div>
+    </section>
 
-    <h2>Flexible container, unflexible content</h2>
-    <section>
+    <h3>Only shrinks are set (flex-shrink: 0 / 1 / 2)</h3>
+    <section class="flexContainer">
+        <article class="flexShrink0">
+            <h3>First article</h3>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+
+        <article class="flexShrink1">
+            <h3>Second article</h3>
+
+            <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et
+                commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer
+                in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis
+                risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis,
+                id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum.
+                Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis,
+                neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada
+                diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur
+                augue lorem, dapibus quis, laoreet et, pretium ac, nisi. Aenean magna nisl, mollis quis,
+                molestie eu, feugiat in, orci. In hac habitasse platea dictumst.</p>
+        </article>
+
+        <article class="flexShrink2">
+            <h3>Third article</h3>
+
+            <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et
+                commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer
+                in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis
+                risus a elit. Etiam tempor.</p>
+        </article>
+    </section>
+
+    <h3>Unflexible content (flex: none - no grow, no shrink, from width)</h3>
+    <section class="flexContainer">
         <article class="noneFlex">
             <h3>First article</h3>
 
@@ -89,8 +127,8 @@
         </article>
     </section>
 
-    <h2>Flex initial</h2>
-    <section>
+    <h3>Flex default - shrinking content (flex: initial - no grow, shrink, from width)</h3>
+    <section class="flexContainer">
         <article class="initialFlex">
             <h3>First article</h3>
 
@@ -126,8 +164,8 @@
         </article>
     </section>
 
-    <h2>Flex auto</h2>
-    <section>
+    <h3>Full flexing content (flex: auto - grow, shrink, from width)</h3>
+    <section class="flexContainer">
         <article class="autoFlex">
             <h3>First article</h3>
 
@@ -163,8 +201,8 @@
         </article>
     </section>
 
-    <h2>Flex 1-2-1</h2>
-    <section>
+    <h3>Proportional flexing 1-2-1 (flex: n - grow n, shrink n, from 0)</h3>
+    <section class="flexContainer">
         <article class="oneFlex">
             <h3>First article</h3>
 
@@ -199,16 +237,8 @@
         </article>
     </section>
 
-    <h2>Center boxes in a container</h2>
-    <h3>Plain container</h3>
-    <div>
-        <div class="box">1</div>
-        <div class="box">2</div>
-        <div class="box">3</div>
-    </div>
-
-    <h3>Flexbox container</h3>
-    <section>
+    <h2>Center boxes in a flex container</h2>
+    <section class="flexContainer">
         <div class="box">1</div>
         <div class="box">2</div>
         <div class="box">3</div>

@@ -2,14 +2,51 @@ header {
     text-align: center;
 }
 
-section {
+div {
+    border: 1px solid black;
+}
+
+.flexContainer {
     display: flex;
     border: 1px solid black;
     padding: 10px;
 }
 
-div {
-    border: 1px solid black;
+article {
+    width: 250px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid red;
+}
+
+.flexGrow0 {
+    flex-grow: 0;
+    background-color: rgb(4, 252, 252);
+}
+
+.flexGrow1 {
+    flex-grow: 1;
+    background-color: rgb(19, 216, 216);
+}
+
+.flexGrow2 {
+    flex-grow: 2;
+    background-color: rgb(41, 156, 156);
+}
+
+.flexShrink0 {
+    flex-shrink: 0;
+    background-color: rgb(58, 252, 4);
+}
+
+.flexShrink1 {
+    flex-shrink: 1;
+    background-color: rgb(68, 207, 29);
+}
+
+.flexShrink2 {
+    flex-shrink: 2;
+    background-color: rgb(71, 141, 52);
 }
 
 .noneFlex {
@@ -30,13 +67,6 @@ div {
 
 .twoFlex {
     flex: 2;
-}
-
-article {
-    width: 300px;
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid red;
 }
 
 .box {
