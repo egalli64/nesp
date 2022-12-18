@@ -1,3 +1,16 @@
+h1 {
+    text-align: center;
+}
+
+#grid121abs {
+    display: grid;
+    grid-template-columns: 100px 200px 100px;
+    gap: 20px;
+    border: 2px solid blue;
+    margin: 10px;
+    padding: 10px;
+}
+
 #grid121 {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -19,6 +32,7 @@
 
 .box {
     border: 2px solid green;
+    background-color: aquamarine;
     padding: 10px;
     text-align: center;
 }
