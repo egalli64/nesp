@@ -1,5 +1,34 @@
+h1 {
+    text-align: center;
+}
+
+ul {
+    border: 1px black solid;
+}
+
 nav>ul>li {
     display: inline-block;
+    background-color: azure;
+}
+
+.plainBlock {
+    display: block;
+    background-color: aquamarine;
+}
+
+.mbp {
+    margin: 10px;
+    border: 2px red dotted;
+    padding: 10px;
+}
+
+.sized {
+    width: 50vw;
+    height: 100px;
+}
+
+div {
+    background-color: beige;
 }
 
 #hidden {

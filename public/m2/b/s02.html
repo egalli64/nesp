@@ -4,24 +4,54 @@
 <head>
     <meta charset="utf-8">
     <title>The display property</title>
-    <link rel="stylesheet" type="text/css" href="css/s02.css">
+    <link rel="stylesheet" href="css/s02.css">
 </head>
 
 <body>
     <header>
         <h1>The display property</h1>
     </header>
+    <h2>A nav with LI styled as inline-block</h2>
     <nav>
         <ul>
-            <li><a href="..">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="">Go</a></li>
             <li><a href="">Help</a></li>
         </ul>
     </nav>
 
-    <div id="hidden">
-        The user should not normally see this block
+    <h2>A nav with LI styled as default block display</h2>
+
+    <nav>
+        <ul>
+            <li class="plainBlock"><a href="../index.html">Home</a></li>
+            <li class="plainBlock"><a href="">Go</a></li>
+            <li class="plainBlock"><a href="">Help</a></li>
+        </ul>
+    </nav>
+
+    <h2>Styling margin, border, padding, width, height</h2>
+    <h3>Blocks</h3>
+    <div>
+        <p class="mbp sized">A sized paragrah</p>
+        <p class="mbp">Another paragrah</p>
     </div>
+
+    <h3>Inline</h3>
+    <div>
+        <span class="mbp sized">A span - top/bottom padding and margin not respected, width and height have no effect</span>
+        <span class="mbp">Another span</span>
+    </div>
+
+    <h3>Inline-block</h3>
+    <div>
+        <button class="mbp sized">A sized button</button>
+        <button class="mbp">Another button</button>
+    </div>
+
+    <h2>A hidden paragraph below (display none)</h2>
+    <p id="hidden">The user should not normally see this paragraph</p>
+    <h2>A hidden paragraph above</h2>
 </body>
 
 </html>
