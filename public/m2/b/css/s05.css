@@ -1,3 +1,7 @@
+h1 {
+    text-align: center;
+}
+
 #container {
     background-color: yellow;
     padding: 10px;
