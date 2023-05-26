@@ -16,7 +16,8 @@ x.addEventListener('change', () => console.log('x changed'));
 let clickable = document.getElementById('clickable');
 
 clickable.addEventListener('click', event => console.log('Click on clickable box', event.screenX, event.screenY));
-clickable.addEventListener('dblclick', event => console.log('Double click on clickable box', event.screenX, event.screenY));
+// "offset" is relative to the current element
+clickable.addEventListener('dblclick', event => console.log('Double click on clickable box', event.offsetX, event.offsetY));
 clickable.addEventListener('mouseover', event => console.log('Mouse over the clickable box', event.screenX, event.screenY));
 clickable.addEventListener('mouseout', event => console.log('Mouse out of the clickable box', event.screenX, event.screenY));
 
