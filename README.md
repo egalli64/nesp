@@ -11,3 +11,5 @@ From CLI, just:
 - npm install
 - _(code .)_
 - node server.js
+
+In a browser, go to localhost:8080
