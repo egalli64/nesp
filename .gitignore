@@ -1,2 +1,10 @@
-node_modules
-public/m3jq/js/jquery*.js
+# Node.js local files
+/node_modules/
+
+# Java local files
+/target/
+
+# Eclipse local files
+/.classpath
+/.project
+/.settings/

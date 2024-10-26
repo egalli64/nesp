@@ -5,7 +5,7 @@ body {
 
 /* rule for the "p" elements */
 p {
-    font-family: cursive;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 /* rule for classified elements */
