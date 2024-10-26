@@ -1,2 +1,5 @@
+# Node.js local files
 node_modules
-public/m3jq/js/jquery*.js
+
+# Java local files
+target
