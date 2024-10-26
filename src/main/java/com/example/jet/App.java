@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.example.jet.servlet.Hello;
+import com.example.jet.servlet.Test;
 
 public class App {
     private static final int PORT = 8080;
@@ -28,6 +29,7 @@ public class App {
 
         // dynamic resources
         context.addServlet(new ServletHolder(new Hello()), "/hello");
+        context.addServlet(new ServletHolder(new Test()), "/test");
 
         server.start();
         log.info("Jetty started at http://localhost:" + PORT);
