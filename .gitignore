@@ -1,5 +1,10 @@
 # Node.js local files
-node_modules
+/node_modules/
 
 # Java local files
-target
+/target/
+
+# Eclipse local files
+/.classpath
+/.project
+/.settings/
