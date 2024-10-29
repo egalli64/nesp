@@ -12,9 +12,9 @@ import org.slf4j.LoggerFactory;
 import com.example.jet.servlet.Hello;
 import com.example.jet.servlet.Test;
 
-public class App {
+public class ServerStartup {
     private static final int PORT = 8080;
-    private static final Logger log = LoggerFactory.getLogger(App.class);
+    private static final Logger log = LoggerFactory.getLogger(ServerStartup.class);
 
     public static void main(String[] args) throws Exception {
         Server server = new Server(PORT);

@@ -3,9 +3,9 @@
     "configurations": [
       {
         "type": "java",
-        "name": "App",
+        "name": "ServerStartup",
         "request": "launch",
-        "mainClass": "com.example.jet.App",
+        "mainClass": "com.example.jet.ServerStartup",
         "projectName": "jet"
       },
       {
