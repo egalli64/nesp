@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/egalli64/nesp.git"
+    "url": "git+https://github.com/egalli64/web-intro.git"
   },
   "author": "egalli64@gmail.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/egalli64/nesp/issues"
+    "url": "https://github.com/egalli64/web-intro/issues"
   },
-  "homepage": "https://github.com/egalli64/nesp#readme",
+  "homepage": "https://github.com/egalli64/web-intro#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.19.2"
