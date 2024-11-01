@@ -7,7 +7,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get('/hello', function (req, res) {
+app.get('/hello', function (_, res) {
     res.send('{"message": "Hello World!"}');
 });
 
