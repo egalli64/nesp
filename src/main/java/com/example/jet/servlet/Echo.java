@@ -1,3 +1,8 @@
+/*
+ * Introduction to Web technologies (with Java support)
+ * 
+ * https://github.com/egalli64/jaoo
+ */
 package com.example.jet.servlet;
 
 import java.io.IOException;
@@ -8,7 +13,12 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-public class Test extends HttpServlet {
+/**
+ * Generate a simple HTML page echoing the input parameters
+ * <p>
+ * Both GET and POST requests are supported
+ */
+public class Echo extends HttpServlet {
     private static final long serialVersionUID = 4190906381967108924L;
 
     @Override

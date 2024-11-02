@@ -15,7 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.example.jet.servlet.Hello;
-import com.example.jet.servlet.Test;
+import com.example.jet.servlet.Echo;
 
 /**
  * Start the Jetty server
@@ -42,7 +42,7 @@ public class ServerStartup {
 
         // dynamic resources
         context.addServlet(new ServletHolder(new Hello()), "/hello");
-        context.addServlet(new ServletHolder(new Test()), "/test");
+        context.addServlet(new ServletHolder(new Echo()), "/test");
 
         try {
             server.start();
