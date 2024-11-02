@@ -1,3 +1,8 @@
+/*
+ * Introduction to Web technologies (with Java support)
+ * 
+ * https://github.com/egalli64/jaoo
+ */
 package com.example.jet;
 
 import java.io.File;
@@ -12,11 +17,19 @@ import org.slf4j.LoggerFactory;
 import com.example.jet.servlet.Hello;
 import com.example.jet.servlet.Test;
 
+/**
+ * Start the Jetty server
+ */
 public class ServerStartup {
     private static final int PORT = 8080;
     private static final Logger log = LoggerFactory.getLogger(ServerStartup.class);
 
-    public static void main(String[] args) throws Exception {
+    /**
+     * Let Jetty serve the public folder and a couple of basic servlet
+     * 
+     * @param args not used
+     */
+    public static void main(String[] args) {
         Server server = new Server(PORT);
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
         context.setContextPath("/");
@@ -31,8 +44,14 @@ public class ServerStartup {
         context.addServlet(new ServletHolder(new Hello()), "/hello");
         context.addServlet(new ServletHolder(new Test()), "/test");
 
-        server.start();
-        log.info("Jetty started at http://localhost:" + PORT);
-        server.join();
+        try {
+            server.start();
+            log.info("Jetty started at http://localhost:" + PORT);
+            server.join();
+        } catch (InterruptedException ex) {
+            log.error("Can't correctly join the server", ex);
+        } catch (Exception ex) {
+            log.error("Can't start the server up", ex);
+        }
     }
 }
