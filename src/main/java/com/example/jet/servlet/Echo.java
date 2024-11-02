@@ -1,7 +1,7 @@
 /*
  * Introduction to Web technologies (with Java support)
  * 
- * https://github.com/egalli64/jaoo
+ * https://github.com/egalli64/web-intro
  */
 package com.example.jet.servlet;
 
