@@ -1,10 +1,14 @@
 /**
- * Variables
+ * Introduction to Web technologies
+ * 
+ * JavaScript - Variables
+ * 
+ * https://github.com/egalli64/web-intro
  */
 
 // string
-let name = 'Bob';
-console.log(name, typeof name);
+let firstName = 'Bob';
+console.log(firstName, typeof firstName);
 
 // number
 let value = 42;
