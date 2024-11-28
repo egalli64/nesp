@@ -1,5 +1,9 @@
 /**
- * Arithmetic operators
+ * Introduction to Web technologies
+ * 
+ * JavaScript - Arithmetic operators
+ * 
+ * https://github.com/egalli64/web-intro
  */
 
 console.log('2 + 3 is', 2 + 3);
