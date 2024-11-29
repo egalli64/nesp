@@ -1,5 +1,9 @@
 /**
- * Loops
+ * Introduction to Web technologies
+ * 
+ * JavaScript - Loops
+ * 
+ * https://github.com/egalli64/web-intro
  */
 
 for (let i = 0; i < 3; i++) {
