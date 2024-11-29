@@ -1,13 +1,19 @@
 /**
- * Conditions
+ * Introduction to Web technologies
+ * 
+ * JavaScript - Conditions
+ * 
+ * https://github.com/egalli64/web-intro
  */
 
 let flag = true;
+
 if (flag) {
     console.log('flag is true');
 }
 
 let x;
+
 if (x) {
     console.log('you are not expected to get here');
 } else {
@@ -25,4 +31,5 @@ switch (value) {
         break;
 }
 
-console.log(x ? 'you are not supposed to get this string' : 'x is undefined, and undefined is falsy');
+let s = x ? 'you are not supposed to get this string' : 'x is undefined, and undefined is falsy';
+console.log(s);
