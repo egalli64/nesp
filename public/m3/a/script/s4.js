@@ -1,5 +1,9 @@
 /**
- * Assignment operators
+ * Introduction to Web technologies
+ * 
+ * JavaScript - Assignment operators
+ * 
+ * https://github.com/egalli64/web-intro
  */
 
 let value = 2;
