@@ -1,5 +1,9 @@
 /**
- * Relational operators
+ * Introduction to Web technologies
+ * 
+ * JavaScript - Relational operators
+ * 
+ * https://github.com/egalli64/web-intro
  */
 
 let value = 2;
