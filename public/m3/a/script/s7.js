@@ -1,5 +1,9 @@
 /**
- * Logical (and bitwise) operators
+ * Introduction to Web technologies
+ * 
+ * JavaScript - Logical (and bitwise) operators
+ * 
+ * https://github.com/egalli64/web-intro
  */
 
 let alpha = true;
