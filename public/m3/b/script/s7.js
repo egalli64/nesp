@@ -1,5 +1,9 @@
-/**
- * @file The Date object
+/*
+ * Introduction to Web technologies
+ * 
+ * JavaScript - The Date object
+ * 
+ * https://github.com/egalli64/web-intro
  */
 
 // the current datetime
