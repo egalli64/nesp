@@ -1,5 +1,9 @@
 /**
- * Array
+ * Introduction to Web technologies
+ * 
+ * JavaScript - Array
+ * 
+ * https://github.com/egalli64/web-intro
  */
 
 let data = [1, 'hello', [true, 42.24]];
