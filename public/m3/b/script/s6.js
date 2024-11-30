@@ -1,5 +1,9 @@
 /**
- * Math
+ * Introduction to Web technologies
+ * 
+ * JavaScript - Math
+ * 
+ * https://github.com/egalli64/web-intro
  */
 
 console.log('three interesting numbers:', Math.E, Math.SQRT2, Math.PI)
