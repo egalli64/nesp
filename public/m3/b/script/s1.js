@@ -1,5 +1,9 @@
 /**
- * Object
+ * Introduction to Web technologies
+ * 
+ * JavaScript - Object
+ * 
+ * https://github.com/egalli64/web-intro
  */
 
 let person = {
