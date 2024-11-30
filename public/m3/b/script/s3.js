@@ -1,5 +1,9 @@
 /**
- * String
+ * Introduction to Web technologies
+ * 
+ * JavaScript - String
+ * 
+ * https://github.com/egalli64/web-intro
  */
 
 // three ways of delimiting a string
