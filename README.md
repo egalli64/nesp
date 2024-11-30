@@ -3,9 +3,7 @@ Introduction to Web Technologies
 
 Mainly a static web application running on Node.js or Jetty
 
-Developed on VS Code https://code.visualstudio.com/
-
-## Running on Jetty
+## With Jetty
 
 Requires Java
 - Tested on version 21
@@ -14,11 +12,10 @@ Requires Java
 From CLI, just:
 - git clone the repo
 - move in the web-intro folder
+- build using your favorite Java tools (with Maven)
 - the main class is ServerStartup in the com.example.jet package
 
-The application is served on localhost:8080
-
-## Running on Node.js
+## With Node.js
 
 Requires Node.JS: https://nodejs.org/en/download/ (LTS)
 - Tested on version 20
@@ -28,7 +25,8 @@ From CLI, just:
 - git clone the repo
 - move in the web-intro folder
 - npm install
-- _(code .)_
 - node server.js
 
-In a browser, go to localhost:8080
+## Client side
+
+In both cases the application is served on localhost:8080
