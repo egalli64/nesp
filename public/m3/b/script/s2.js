@@ -1,5 +1,9 @@
 /**
- * Function
+ * Introduction to Web technologies
+ * 
+ * JavaScript - Function
+ * 
+ * https://github.com/egalli64/web-intro
  */
 
 function f() {
