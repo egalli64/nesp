@@ -11,7 +11,7 @@
 <head>
     <meta charset="utf-8">
     <title>BOM</title>
-    <script type="text/javascript" src="script/s3.js"></script>
+    <script type="text/javascript" src="script/s3.js" defer></script>
 </head>
 
 <body>
@@ -26,13 +26,6 @@
         <input type="button" value="alert" onclick="alert('alert!')">
         <input type="button" value="confirm" onclick="checkConfirm()">
     </div>
-
-    <script type="text/javascript">
-        let target = document.getElementById('target');
-
-        target.value += `window heights: ${window.outerHeight}, ${window.innerHeight}\n`;
-        target.value += `window widths: ${window.outerWidth}, ${window.innerWidth}\n`;
-    </script>
 </body>
 
 </html>
