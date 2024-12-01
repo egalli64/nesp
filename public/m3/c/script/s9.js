@@ -1,5 +1,11 @@
-/**
- * The elements should be in the DOM!
+/*
+ * Introduction to Web technologies
+ * 
+ * JavaScript - classList
+ * 
+ * Required to be loaded when the elements referenced by id are in the DOM!
+ * 
+ * https://github.com/egalli64/web-intro
  */
 
 let target = document.getElementById('target');

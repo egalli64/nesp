@@ -1,0 +1,27 @@
+/*
+ * Introduction to Web technologies
+ * 
+ * JavaScript - classList
+ * 
+ * https://github.com/egalli64/web-intro
+ */
+
+.back {
+	background-color: lightblue;
+}
+
+.back1 {
+	background-color: yellow;
+}
+
+.fore {
+	color: red;
+}
+
+.borderA {
+	border: 1px black solid;
+}
+
+.borderB {
+	border: 2px purple dotted;
+}
