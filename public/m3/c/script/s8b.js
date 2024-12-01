@@ -1,18 +1,27 @@
-/**
- * Bind to f, x, clickable, and resizableInline elements -> they should be in the DOM!
+/*
+ * Introduction to Web technologies
+ * 
+ * JavaScript - Events & attributes
+ * 
+ * Bind functions to elements identified by id - assuming they are in the DOM!
+ * 
+ * https://github.com/egalli64/web-intro
  */
 
+// 1.
 document.getElementById('f').addEventListener('submit', event => {
     console.log('never submit this form!');
     event.preventDefault();
 });
 
+// 2.
 let x = document.getElementById('x');
 
 x.addEventListener('focus', () => console.log('x on focus'));
 x.addEventListener('blur', () => console.log('x blurred'));
 x.addEventListener('change', () => console.log('x changed'));
 
+// 3.
 let clickable = document.getElementById('clickable');
 
 clickable.addEventListener('click', event => console.log('Click on clickable box', event.screenX, event.screenY));
@@ -34,7 +43,7 @@ resizableInline.addEventListener('mouseout', () => {
     resizableInline.style.height = baseInlineSize + 'px';
 });
 
-// squared block element assumed
+// 4. squared block element assumed
 let resizableBlock = document.getElementById('resizableBlock');
 let baseBlockSize = resizableBlock.offsetWidth;
 

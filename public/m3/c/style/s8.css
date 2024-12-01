@@ -1,0 +1,15 @@
+/*
+ * Introduction to Web technologies
+ * 
+ * JavaScript - Events & attributes
+ * 
+ * https://github.com/egalli64/web-intro
+ */
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

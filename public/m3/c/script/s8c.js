@@ -1,6 +1,11 @@
-/**
- * Used from the page, could be loaded before or after
+/*
+ * Introduction to Web technologies
+ * 
+ * JavaScript - Events & attributes
+ * 
+ * https://github.com/egalli64/web-intro
  */
+
 function random(choice) {
     // Math.trunc() is an ES 6 feature. Use floor() or maybe "| 0" for backward compability
     return Math.trunc(Math.random() * choice);

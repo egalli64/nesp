@@ -1,3 +1,10 @@
+<!--
+ Introduction to Web technologies
+
+ JavaScript - Events & attributes
+
+ https://github.com/egalli64/web-intro
+  -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,21 +12,21 @@
     <meta charset="utf-8">
     <title>Events &amp; attributes</title>
 
-    <link rel="stylesheet" href="css/s08.css">
+    <link rel="stylesheet" href="style/s8.css">
 
     <!-- should run _before_ loading the DOM -->
     <!-- document load events -->
-    <script type="text/javascript" src="js/s08a.js">
+    <script type="text/javascript" src="script/s8a.js">
     </script>
 
     <!-- should run _after_ loading the DOM -->
     <!-- Bind to f, x, clickable, and resizable elements -->
-    <script type="text/javascript" src="js/s08b.js" defer>
+    <script type="text/javascript" src="script/s8b.js" defer>
     </script>
 
     <!-- could run before _or_ after loading the DOM -->
     <!-- for button click -->
-    <script type="text/javascript" src="js/s08c.js" async>
+    <script type="text/javascript" src="script/s8c.js" async="true">
     </script>
 </head>
 
@@ -47,7 +54,7 @@
     </div>
 
     <!-- change size on mouseover, reset it on mouseout (see b script)-->
-    <img id="resizableInline" class="box" src="../m2/c/img/1.jpg">
+    <img id="resizableInline" class="box" src="/m2/e/img/1.jpg">
     <div id="resizableBlock" class="box"></div>
 </body>
 
